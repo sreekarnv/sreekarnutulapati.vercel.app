@@ -4,11 +4,11 @@ $color-black: #000000;
 $colors-theme: ();
 
 $colors-neutral: (
-	'white': $color-white,
-	'black': $color-black,
+  'white': $color-white,
+  'black': $color-black,
 );
 
 $colors: map-merge(
-	$map1: $colors-theme,
-	$map2: $colors-neutral,
+  $map1: $colors-theme,
+  $map2: $colors-neutral,
 );

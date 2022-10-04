@@ -1,0 +1,7 @@
+*.d.ts
+**/node_modules/*
+**/out/*
+**/.next/*
+.husky/*
+*.json
+*config.js

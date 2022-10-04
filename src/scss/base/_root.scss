@@ -1,15 +1,15 @@
 @use '../variables/main' as variables;
 
 :root {
-	@each $colorValue, $colorKey in variables.$colors {
-		--color-#{$colorValue}: #{$colorKey};
-	}
+  @each $colorValue, $colorKey in variables.$colors {
+    --color-#{$colorValue}: #{$colorKey};
+  }
 
-	@each $fontFamilyValue, $fontFamilyKey in variables.$font-families {
-		--font-#{$fontFamilyValue}: #{$fontFamilyKey};
-	}
+  @each $fontFamilyValue, $fontFamilyKey in variables.$font-families {
+    --font-#{$fontFamilyValue}: #{$fontFamilyKey};
+  }
 
-	@each $fwValue, $fsKey in variables.$font-weights {
-		--font-weight-#{$fwValue}: #{$fsKey};
-	}
+  @each $fwValue, $fsKey in variables.$font-weights {
+    --font-weight-#{$fwValue}: #{$fsKey};
+  }
 }

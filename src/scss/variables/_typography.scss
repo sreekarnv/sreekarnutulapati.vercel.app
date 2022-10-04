@@ -2,7 +2,7 @@
 $ff-default: 'Inter', sans-serif;
 
 $font-families: (
-	'default': $ff-default,
+  'default': $ff-default,
 );
 
 // Font sizes
@@ -16,9 +16,9 @@ $fw-semi-bold: 600;
 $fw-bold: 600;
 
 $font-weights: (
-	'light': $fw-light,
-	'normal': $fw-normal,
-	'medium': $fw-medium,
-	'semi-bold': $fw-semi-bold,
-	'bold': $fw-bold,
+  'light': $fw-light,
+  'normal': $fw-normal,
+  'medium': $fw-medium,
+  'semi-bold': $fw-semi-bold,
+  'bold': $fw-bold,
 );
