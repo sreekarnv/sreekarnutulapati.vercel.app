@@ -1,0 +1,24 @@
+@use '../variables/main' as variables;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+*,
+*::before,
+*::after {
+	font-family: inherit;
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 62.5%;
+}
+
+body {
+	box-sizing: border-box;
+	font-family: variables.$ff-default;
+}
+
+a {
+	color: inherit;
+	text-decoration: none;
+}
