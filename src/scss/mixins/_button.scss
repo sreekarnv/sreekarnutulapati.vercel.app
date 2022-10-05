@@ -1,0 +1,22 @@
+@use '../variables/main.scss' as variables;
+
+@mixin solid-button($color-bg, $color-text) {
+  &,
+  &:link {
+    padding: 1.2rem 2rem;
+    font-weight: variables.$fw-medium;
+    font-size: 1.6rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: $color-bg;
+    color: $color-text;
+    transition: all 0.3s ease-out;
+  }
+
+  &:hover,
+  &:focus-visible {
+    background-color: darken($color-bg, 10%);
+    color: $color-text;
+  }
+}

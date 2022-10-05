@@ -1,7 +1,13 @@
 $color-white: #ffffff;
 $color-black: #000000;
 
-$colors-theme: ();
+$color-primary: #9a46dc;
+$color-secondary: #101830;
+
+$colors-theme: (
+  'primary': $color-primary,
+  'secondary': $color-secondary,
+);
 
 $colors-neutral: (
   'white': $color-white,

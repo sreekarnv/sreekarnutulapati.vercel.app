@@ -1,0 +1,7 @@
+@use './../variables/colors' as colors;
+
+@each $colorValue, $colorName in colors.$colors-theme {
+  :export {
+    #{$colorValue}: $colorName;
+  }
+}

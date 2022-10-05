@@ -1,0 +1,26 @@
+@use '../variables/main.scss' as variables;
+@use '../mixins/button' as mixins;
+
+.has-elevation {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+
+  &:hover,
+  &:focus-visible {
+    transform: translateY(-4px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.25);
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.35);
+  }
+}
+
+@each $colorValue, $colorKey in variables.$colors-theme {
+  .#{$colorValue} {
+    @include mixins.solid-button(
+      $color-bg: $colorKey,
+      $color-text: variables.$color-white
+    );
+  }
+}
