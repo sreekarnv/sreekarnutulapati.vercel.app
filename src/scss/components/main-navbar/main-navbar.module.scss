@@ -1,0 +1,40 @@
+@use '../../variables/main.scss' as variables;
+
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5rem 10rem;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.brandContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.brandContentName {
+  font-size: 2.25rem;
+  font-weight: variables.$fw-semi-bold;
+  margin-bottom: 1rem;
+  color: variables.$color-black;
+}
+
+.brandContentDesignation {
+  font-size: 1.4rem;
+  font-weight: variables.$fw-medium;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: variables.$color-gray-light;
+}

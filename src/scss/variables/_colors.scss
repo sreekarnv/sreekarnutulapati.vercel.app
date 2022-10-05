@@ -1,8 +1,11 @@
 $color-white: #ffffff;
 $color-black: #000000;
 
-$color-primary: #9a46dc;
+$color-primary: #518bff;
 $color-secondary: #101830;
+
+$color-gray-light: #667085;
+$color-gray-dark: #3f4551;
 
 $colors-theme: (
   'primary': $color-primary,
@@ -12,6 +15,8 @@ $colors-theme: (
 $colors-neutral: (
   'white': $color-white,
   'black': $color-black,
+  'gray-light': $color-gray-light,
+  'gray-dark': $color-gray-dark,
 );
 
 $colors: map-merge(

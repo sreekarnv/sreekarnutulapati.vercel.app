@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import variants from '@/scss/config/theme.module.scss';
-import classes from '@/scss/components/button.module.scss';
+import classes from '@/scss/components/button/button.module.scss';
 
 interface ButtonProps
   extends React.DetailedHTMLProps<

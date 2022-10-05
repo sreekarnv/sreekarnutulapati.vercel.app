@@ -1,0 +1,29 @@
+@use '../../variables/main.scss' as variables;
+
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 10rem;
+  padding-top: 1rem;
+  border-top: 2px solid variables.$color-gray-dark;
+  color: variables.$color-black;
+  transition: all 0.3s ease-out;
+
+  &:focus-visible,
+  &:hover {
+    color: variables.$color-primary;
+    border-top: 2px solid variables.$color-primary;
+  }
+}
+
+.text {
+  font-size: 1.6rem;
+  font-weight: variables.$fw-bold;
+}
+
+.icon {
+  height: 1.5rem;
+  width: 1.5rem;
+  font-size: 1.5rem;
+}
