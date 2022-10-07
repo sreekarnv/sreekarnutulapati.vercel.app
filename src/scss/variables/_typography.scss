@@ -13,7 +13,8 @@ $fw-light: 300;
 $fw-normal: 400;
 $fw-medium: 500;
 $fw-semi-bold: 600;
-$fw-bold: 600;
+$fw-bold: 700;
+$fw-extra-bold: 800;
 
 $font-weights: (
   'light': $fw-light,
@@ -21,4 +22,5 @@ $font-weights: (
   'medium': $fw-medium,
   'semi-bold': $fw-semi-bold,
   'bold': $fw-bold,
+  'extra-bold': $fw-extra-bold,
 );

@@ -1,22 +1,49 @@
 @use '../variables/main.scss' as variables;
 
+%button {
+  font-weight: variables.$fw-bold;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
 @mixin solid-button($color-bg, $color-text) {
   &,
   &:link {
-    padding: 1.2rem 2rem;
-    font-weight: variables.$fw-medium;
-    font-size: 1.6rem;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
+    @extend %button;
+
+    border: 2px solid $color-bg;
     background-color: $color-bg;
     color: $color-text;
-    transition: all 0.3s ease-out;
   }
 
   &:hover,
   &:focus-visible {
     background-color: darken($color-bg, 10%);
+    border: 2px solid darken($color-bg, 10%);
     color: $color-text;
+  }
+}
+
+@mixin outline-button(
+  $color-bg,
+  $color-text,
+  $color-hover-bg,
+  $color-hover-text
+) {
+  &,
+  &:link {
+    @extend %button;
+
+    border: 2px solid $color-bg;
+    background-color: transparent;
+    color: $color-text;
+  }
+
+  &:hover,
+  &:focus-visible {
+    background-color: $color-hover-bg;
+    color: $color-hover-text;
   }
 }

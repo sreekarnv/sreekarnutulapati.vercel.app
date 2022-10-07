@@ -23,4 +23,23 @@
       $color-text: variables.$color-white
     );
   }
+
+  .#{$colorValue}-outline {
+    @include mixins.outline-button(
+      $color-bg: $colorKey,
+      $color-text: $colorKey,
+      $color-hover-bg: $colorKey,
+      $color-hover-text: variables.$color-white
+    );
+  }
+}
+
+.large {
+  padding: 2rem 3.5rem;
+  font-size: 1.8rem;
+}
+
+.medium {
+  padding: 1.2rem 2rem;
+  font-size: 1.6rem;
 }

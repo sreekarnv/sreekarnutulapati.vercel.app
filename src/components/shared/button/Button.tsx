@@ -1,7 +1,18 @@
 import React from 'react';
 import clsx from 'clsx';
-import variants from '@/scss/config/theme.module.scss';
+import theme from '@/scss/config/theme.module.scss';
 import classes from '@/scss/components/button/button.module.scss';
+
+const variants = {
+  ...theme,
+  'primary-outline': classes.primaryOutline,
+  'secondary-outline': classes.secondaryOutline,
+};
+
+const sizes = {
+  large: classes.large,
+  medium: classes.medium,
+};
 
 interface ButtonProps
   extends React.DetailedHTMLProps<
@@ -10,17 +21,19 @@ interface ButtonProps
   > {
   hasElevation?: boolean;
   variant?: keyof typeof variants;
+  size?: keyof typeof sizes;
 }
 
 const Button = React.forwardRef(
   (props: ButtonProps, ref: React.Ref<HTMLButtonElement>) => {
-    const { hasElevation, variant = 'primary' } = props;
+    const { hasElevation, variant = 'primary', size = 'medium' } = props;
 
     return (
       <button
         className={clsx([
-          classes[variant],
+          variants[variant],
           hasElevation && classes.hasElevation,
+          sizes[size],
         ])}
         ref={ref}
         {...props}
