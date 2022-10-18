@@ -14,7 +14,7 @@ const Seo: React.FC<SeoProps> = ({ title }) => {
 
       <meta
         name="description"
-        content="Full Stack Web and App Developer. Currently a student at the University of BITS Pilani, Hyderabad Campus."
+        content="I am a self-taught full stack web and app developer. Currently a student at the University of BITS Pilani, Hyderabad Campus."
       />
 
       <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />

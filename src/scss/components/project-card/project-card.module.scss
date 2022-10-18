@@ -1,0 +1,81 @@
+@use '../../variables/main.scss' as variables;
+
+.bluePink {
+  background: linear-gradient(
+    180deg,
+    map-get(variables.$gradients, 'blue-pink', 'from'),
+    map-get(variables.$gradients, 'blue-pink', 'to')
+  );
+}
+
+.greenBlue {
+  background: linear-gradient(
+    180deg,
+    map-get(variables.$gradients, 'green-blue', 'from'),
+    map-get(variables.$gradients, 'green-blue', 'to')
+  );
+}
+
+.orangeGreen {
+  background: linear-gradient(
+    180deg,
+    map-get(variables.$gradients, 'orange-green', 'from'),
+    map-get(variables.$gradients, 'orange-green', 'to')
+  );
+}
+
+.yellowPurple {
+  background: linear-gradient(
+    180deg,
+    map-get(variables.$gradients, 'yellow-purple', 'from'),
+    map-get(variables.$gradients, 'yellow-purple', 'to')
+  );
+}
+
+.projectCard {
+  padding: 3rem;
+  width: 100%;
+  border-radius: 10px;
+
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+
+  margin-bottom: 3rem;
+}
+
+.projectCardContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.25rem;
+  flex-basis: 100%;
+}
+
+.projectCardContentTitle {
+  font-size: 3.25rem;
+  font-weight: variables.$fw-semi-bold;
+  margin-bottom: 1rem;
+  color: variables.$color-secondary;
+}
+
+.projectCardContentDescription {
+  font-size: 2rem;
+  font-weight: variables.$fw-normal;
+  color: variables.$color-gray-light;
+  line-height: 1.4;
+}
+
+.projectCardContentCta {
+  display: flex;
+  gap: 4rem;
+}
+
+.projectCardMedia {
+  height: 100%;
+  width: 192rem;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+}

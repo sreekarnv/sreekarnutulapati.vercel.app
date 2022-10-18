@@ -1,0 +1,15 @@
+@use '../../variables/main.scss' as variables;
+
+.page {
+  padding: 5rem 10rem;
+}
+
+.heading {
+  margin-bottom: 3rem;
+  font-size: 5rem;
+  text-transform: uppercase;
+}
+
+.projectSection {
+  margin-bottom: 8rem;
+}

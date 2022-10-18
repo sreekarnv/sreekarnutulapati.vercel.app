@@ -23,3 +23,22 @@ $colors: map-merge(
   $map1: $colors-theme,
   $map2: $colors-neutral,
 );
+
+$gradients: (
+  'blue-pink': (
+    'from': #d4f1f6,
+    'to': #f6e2ec,
+  ),
+  'green-blue': (
+    'from': #eeffe8,
+    'to': #e8fcff,
+  ),
+  'orange-green': (
+    'from': #cdf0e3,
+    'to': #f6ece2,
+  ),
+  'yellow-purple': (
+    'from': #f0eebf,
+    'to': #ebcdf0,
+  ),
+);

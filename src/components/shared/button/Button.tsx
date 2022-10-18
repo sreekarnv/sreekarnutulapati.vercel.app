@@ -1,10 +1,10 @@
 import React from 'react';
 import clsx from 'clsx';
-import theme from '@/scss/config/theme.module.scss';
 import classes from '@/scss/components/button/button.module.scss';
 
 const variants = {
-  ...theme,
+  primary: classes.primary,
+  secondary: classes.secondary,
   'primary-outline': classes.primaryOutline,
   'secondary-outline': classes.secondaryOutline,
 };

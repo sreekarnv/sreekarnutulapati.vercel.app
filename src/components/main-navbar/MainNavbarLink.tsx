@@ -6,18 +6,21 @@ import classes from '@/scss/components/main-navbar/main-navbar-link.module.scss'
 interface MainNavbarLinkProps {
   href: string;
   text: string;
+  icon?: React.ReactNode;
 }
 
-const MainNavbarLink: React.FC<MainNavbarLinkProps> = ({ href, text }) => {
+const MainNavbarLink: React.FC<MainNavbarLinkProps> = ({
+  href,
+  text,
+  icon = <BsArrowUpRight className={classes.icon} />,
+}) => {
   return (
     <>
       <li>
         <Link href={href} passHref>
           <a className={classes.root}>
             <span className={classes.text}>{text}</span>
-            <span>
-              <BsArrowUpRight className={classes.icon} />
-            </span>
+            <span>{icon}</span>
           </a>
         </Link>
       </li>

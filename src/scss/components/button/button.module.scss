@@ -24,7 +24,7 @@
     );
   }
 
-  .#{$colorValue}-outline {
+  .#{$colorValue}Outline {
     @include mixins.outline-button(
       $color-bg: $colorKey,
       $color-text: $colorKey,
