@@ -1,4 +1,5 @@
 @use '../../variables/main.scss' as variables;
+@use '../../mixins/main.scss' as mixins;
 
 .bluePink {
   background: linear-gradient(
@@ -42,6 +43,11 @@
   gap: 5rem;
 
   margin-bottom: 3rem;
+
+  @include mixins.respond(laptop-sm) {
+    flex-direction: column-reverse;
+    padding: 1.5rem;
+  }
 }
 
 .projectCardContent {
@@ -57,6 +63,11 @@
   font-weight: variables.$fw-semi-bold;
   margin-bottom: 1rem;
   color: variables.$color-secondary;
+
+  @include mixins.respond(tab-land) {
+    font-size: 2.75rem;
+    margin-bottom: 1.5rem;
+  }
 }
 
 .projectCardContentDescription {
@@ -64,6 +75,11 @@
   font-weight: variables.$fw-normal;
   color: variables.$color-gray-light;
   line-height: 1.4;
+
+  @include mixins.respond(tab-land) {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
 }
 
 .projectCardContentCta {
@@ -78,4 +94,8 @@
   overflow: hidden;
   border-radius: 10px;
   position: relative;
+
+  @include mixins.respond(laptop-sm) {
+    width: 100%;
+  }
 }

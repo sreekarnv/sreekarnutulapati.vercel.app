@@ -1,6 +1,6 @@
 import type { NextPage } from 'next';
 import Seo from '@/components/shared/seo';
-import classes from '@/scss/pages/home.module.scss';
+import classes from '@/scss/pages/home/home.module.scss';
 import Button from '@/components/shared/button';
 import Link from 'next/link';
 

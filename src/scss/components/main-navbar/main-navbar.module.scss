@@ -1,22 +1,46 @@
 @use '../../variables/main.scss' as variables;
+@use '../../mixins/main.scss' as mixins;
 
 .root {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 5rem 10rem;
+
+  @include mixins.respond(laptop-md) {
+    padding: 3rem;
+  }
+
+  @include mixins.respond(tab-land) {
+    padding: 2rem 1rem;
+  }
 }
 
 .nav {
   display: flex;
   align-items: center;
   gap: 3rem;
+
+  @include mixins.respond(tab-land) {
+    display: none;
+  }
 }
 
 .brand {
   display: flex;
   align-items: center;
   gap: 1.25rem;
+}
+
+.brandImage {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+
+  @include mixins.respond(phone-lg) {
+    width: 2rem !important;
+    height: 2rem !important;
+  }
 }
 
 .brandContent {
@@ -29,6 +53,10 @@
   font-weight: variables.$fw-semi-bold;
   margin-bottom: 1rem;
   color: variables.$color-black;
+
+  @include mixins.respond(phone-lg) {
+    font-size: 2rem;
+  }
 }
 
 .brandContentDesignation {
@@ -37,4 +65,8 @@
   text-transform: uppercase;
   letter-spacing: 2px;
   color: variables.$color-gray-light;
+
+  @include mixins.respond(phone-lg) {
+    font-size: 1.2rem;
+  }
 }
