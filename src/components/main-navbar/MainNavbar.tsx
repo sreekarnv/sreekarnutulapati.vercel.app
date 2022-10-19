@@ -3,11 +3,15 @@ import React from 'react';
 import classes from '@/scss/components/main-navbar/main-navbar.module.scss';
 import Image from 'next/image';
 import MainNavbarLink from './MainNavbarLink';
+import MainDrawerMobile from './MainDrawerMobile';
 
 const MainNavbar: React.FC = () => {
+  const [isOpen, setIsOpen] = React.useState(false);
+
   return (
     <>
       <nav className={classes.root}>
+        {/* <MainDrawerMobile {...{ isOpen }} /> */}
         <Link href="/">
           <a className={classes.brand}>
             <Image
@@ -33,6 +37,8 @@ const MainNavbar: React.FC = () => {
           <MainNavbarLink text="About Me" href={'/about'} />
           <MainNavbarLink text="My Work" href={'/work'} />
         </ul>
+
+        {/* <button onClick={() => setIsOpen(!isOpen)}>Toggle</button> */}
       </nav>
     </>
   );

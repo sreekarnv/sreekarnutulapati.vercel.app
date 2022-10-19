@@ -5,14 +5,13 @@ import path from 'path';
 import fs from 'fs';
 import matter from 'gray-matter';
 import { Project } from '@/types/project';
-import React from 'react';
 import Seo from '@/components/shared/seo';
 
 interface WorkPageProps {
   projects: {
-    personal: Project[];
-    course: Project[];
-    openSource: Project[];
+    frontend: Project[];
+    fullStack: Project[];
+    blockchain: Project[];
   };
 }
 
@@ -21,58 +20,55 @@ const WorkPage: NextPage<WorkPageProps> = ({ projects }) => {
     <>
       <Seo title="Work" />
       <div className={classes.page}>
-        <section className={classes.projectSection}>
-          <h1 className={classes.heading}>Personal Projects</h1>
-
-          {projects.personal.map((project) => (
-            <ProjectCard
-              gradient={project.color}
-              key={project.id}
-              project={project}
-            />
-          ))}
-        </section>
-
-        <section className={classes.projectSection}>
-          <h1 className={classes.heading}>Course Projects</h1>
-
-          {projects.course.map((project) => (
-            <ProjectCard
-              gradient={project.color}
-              key={project.id}
-              project={project}
-            />
-          ))}
-        </section>
-
-        <section className={classes.projectSection}>
-          <h1 className={classes.heading}>Open Source Projects</h1>
-
-          {projects.openSource.map((project) => (
-            <ProjectCard
-              gradient={project.color}
-              key={project.id}
-              project={project}
-            />
-          ))}
-        </section>
+        <div>
+          <h1 className={classes.heading}>Full Stack Projects</h1>
+          <section className={classes.projectSection}>
+            {projects.fullStack.map((project) => (
+              <ProjectCard
+                gradient={project.color}
+                key={project.id}
+                project={project}
+              />
+            ))}
+          </section>
+        </div>
+        <div>
+          <h1 className={classes.heading}>Blockchain Projects</h1>
+          <section className={classes.projectSection}>
+            {projects.blockchain.map((project) => (
+              <ProjectCard
+                gradient={project.color}
+                key={project.id}
+                project={project}
+              />
+            ))}
+          </section>
+        </div>
+        <div>
+          <h1 className={classes.heading}>Frontend Projects</h1>
+          <section className={classes.projectSection}>
+            {projects.frontend.map((project) => (
+              <ProjectCard
+                gradient={project.color}
+                key={project.id}
+                project={project}
+              />
+            ))}
+          </section>
+        </div>
       </div>
     </>
   );
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const personalProjects = fs.readdirSync(
-    path.join('src/data/projects/personal')
-  );
-  const courseProjects = fs.readdirSync(path.join('src/data/projects/course'));
-  const openSourceProjects = fs.readdirSync(
-    path.join('src/data/projects/open-source')
+  const blockchainDir = fs.readdirSync(
+    path.join('src/data/projects/blockchain')
   );
 
-  const personalProjectsData = personalProjects.map((filename) => {
+  const blockchain = blockchainDir.map((filename) => {
     const markdownWithMetadata = fs
-      .readFileSync(path.join('src/data/projects/personal', filename))
+      .readFileSync(path.join('src/data/projects/blockchain', filename))
       .toString();
 
     const parsedMarkdown = matter(markdownWithMetadata);
@@ -83,9 +79,11 @@ export const getStaticProps: GetStaticProps = async () => {
     };
   });
 
-  const courseProjectsData = courseProjects.map((filename) => {
+  const frontendDir = fs.readdirSync(path.join('src/data/projects/frontend'));
+
+  const frontend = frontendDir.map((filename) => {
     const markdownWithMetadata = fs
-      .readFileSync(path.join('src/data/projects/course', filename))
+      .readFileSync(path.join('src/data/projects/frontend', filename))
       .toString();
 
     const parsedMarkdown = matter(markdownWithMetadata);
@@ -96,9 +94,13 @@ export const getStaticProps: GetStaticProps = async () => {
     };
   });
 
-  const openSourceProjectsData = openSourceProjects.map((filename) => {
+  const fullStackDir = fs.readdirSync(
+    path.join('src/data/projects/full-stack')
+  );
+
+  const fullStack = fullStackDir.map((filename) => {
     const markdownWithMetadata = fs
-      .readFileSync(path.join('src/data/projects/open-source', filename))
+      .readFileSync(path.join('src/data/projects/full-stack', filename))
       .toString();
 
     const parsedMarkdown = matter(markdownWithMetadata);
@@ -112,9 +114,9 @@ export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
       projects: {
-        personal: personalProjectsData,
-        course: courseProjectsData,
-        openSource: openSourceProjectsData,
+        blockchain,
+        frontend,
+        fullStack,
       },
     },
   };

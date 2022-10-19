@@ -1,10 +1,13 @@
 import type { NextPage } from 'next';
 import classes from '@/scss/pages/about/about.module.scss';
 import Link from 'next/link';
+import Seo from '@/components/shared/seo';
 
 const AboutPage: NextPage = () => {
   return (
     <>
+      <Seo title="About" />
+
       <h1 className={classes.name}>Sreekar Venkata Nutulapati</h1>
       <div className={classes.page}>
         <h1 className={classes.heading}>About Me</h1>

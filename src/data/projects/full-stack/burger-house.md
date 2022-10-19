@@ -9,4 +9,10 @@ links:
   }
 coverImage: 'https://res.cloudinary.com/dfesryh4w/image/upload/v1666187774/portfolio/burger-house.png'
 color: 'orangeGreen'
+techStack:
+  [
+    { link: '/logos/express.png', alt: 'express' },
+    { link: '/logos/react.png', alt: 'react' },
+    { link: '/logos/typescript.png', alt: 'typescript' },
+  ]
 ---

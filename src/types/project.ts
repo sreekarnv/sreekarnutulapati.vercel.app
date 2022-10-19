@@ -10,4 +10,8 @@ export type Project = {
     preview?: string;
   };
   coverImage: string;
+  techStack: {
+    link: string;
+    alt: string;
+  }[];
 };

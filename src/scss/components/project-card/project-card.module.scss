@@ -34,68 +34,45 @@
 }
 
 .projectCard {
-  padding: 3rem;
-  width: 100%;
+  padding: 2rem 1.5rem;
   border-radius: 10px;
-
-  display: flex;
-  justify-content: space-between;
-  gap: 5rem;
-
-  margin-bottom: 3rem;
-
-  @include mixins.respond(laptop-sm) {
-    flex-direction: column-reverse;
-    padding: 1.5rem;
-  }
 }
 
-.projectCardContent {
+.projectCardStack {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 1.25rem;
-  flex-basis: 100%;
-}
-
-.projectCardContentTitle {
-  font-size: 3.25rem;
-  font-weight: variables.$fw-semi-bold;
+  justify-content: flex-end;
+  gap: 1rem;
   margin-bottom: 1rem;
-  color: variables.$color-secondary;
-
-  @include mixins.respond(tab-land) {
-    font-size: 2.75rem;
-    margin-bottom: 1.5rem;
-  }
-}
-
-.projectCardContentDescription {
-  font-size: 2rem;
-  font-weight: variables.$fw-normal;
-  color: variables.$color-gray-light;
-  line-height: 1.4;
-
-  @include mixins.respond(tab-land) {
-    font-size: 1.75rem;
-    margin-bottom: 2rem;
-  }
-}
-
-.projectCardContentCta {
-  display: flex;
-  gap: 4rem;
 }
 
 .projectCardMedia {
-  height: 100%;
-  width: 192rem;
-  aspect-ratio: 16 / 9;
-  overflow: hidden;
-  border-radius: 10px;
   position: relative;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background: map-get(variables.$colors, 'gray-100');
+  margin-bottom: 1rem;
+}
 
-  @include mixins.respond(laptop-sm) {
-    width: 100%;
-  }
+.projectCardTitle {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+}
+
+.projectCardDescription {
+  font-size: 1.55rem;
+  margin-bottom: 1.75rem;
+  min-height: 15rem;
+  display: flex;
+  line-height: 1.6;
+  color: variables.$color-gray-dark;
+}
+
+.projectCardCta {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 }

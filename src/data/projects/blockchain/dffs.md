@@ -5,4 +5,11 @@ description: DFSS is a decentralized version of google drive. Users can upload, 
 links: { github: 'https://github.com/sreekarnv/dfile-storage-and-sharing' }
 coverImage: 'https://res.cloudinary.com/dfesryh4w/image/upload/v1666187828/portfolio/dfss.png'
 color: 'yellowPurple'
+techStack:
+  [
+    { link: '/logos/react.png', alt: 'react' },
+    { link: '/logos/typescript.png', alt: 'typescript' },
+    { link: '/logos/truffle.jpg', alt: 'truffle' },
+    { link: '/logos/solidity.png', alt: 'solidity' },
+  ]
 ---
