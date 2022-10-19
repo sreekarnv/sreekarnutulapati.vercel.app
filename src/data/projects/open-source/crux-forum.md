@@ -7,6 +7,6 @@ links:
     github: 'https://github.com/crux-bphc/crux-forum-website',
     preview: 'https://staging.forum.crux-bphc.com/',
   }
-coverImage: '/projects/crux-forum/cover.png'
+coverImage: 'https://res.cloudinary.com/dfesryh4w/image/upload/v1666187805/portfolio/crux-forum.png'
 color: 'bluePink'
 ---

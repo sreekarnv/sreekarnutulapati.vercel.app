@@ -1,0 +1,77 @@
+@use '../../variables/main.scss' as variables;
+
+.page {
+  padding: 5rem 10rem;
+  color: variables.$color-secondary;
+}
+
+.name {
+  font-size: 26rem;
+  line-height: 0.9;
+  color: rgba(variables.$color-gray-light, 0.1);
+  z-index: -1;
+  text-align: end;
+  pointer-events: none;
+  user-select: none;
+  position: absolute;
+  right: 0;
+}
+
+.heading {
+  font-size: 5rem;
+  line-height: 1.2;
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  max-width: 50rem;
+}
+
+.subHeading {
+  font-size: 3rem;
+  margin-bottom: 5rem;
+}
+
+.contentPara {
+  font-size: 2rem;
+  line-height: 1.5;
+  color: variables.$color-gray-dark;
+  margin-bottom: 2rem;
+}
+
+.companyLink {
+  font-size: 2rem;
+  color: variables.$color-secondary;
+  text-decoration: none;
+  transition: color 0.2s;
+  font-weight: variables.$fw-semi-bold;
+  text-decoration: underline;
+
+  &:hover {
+    color: variables.$color-primary;
+  }
+}
+
+.testimonialLink {
+  display: block;
+  margin-top: 1rem;
+  font-size: 1.4rem;
+  font-weight: variables.$fw-semi-bold;
+
+  &:hover {
+    color: variables.$color-primary;
+  }
+}

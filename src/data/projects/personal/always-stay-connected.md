@@ -7,6 +7,6 @@ links:
     github: 'https://github.com/sreekarnv/connected',
     preview: 'https://always-stay-connected.netlify.app',
   }
-coverImage: '/projects/connected/cover.png'
+coverImage: 'https://res.cloudinary.com/dfesryh4w/image/upload/v1666187796/portfolio/connected.png'
 color: 'bluePink'
 ---

@@ -6,29 +6,39 @@
 
 .wave {
   font-size: 7rem;
-  font-weight: variables.$fw-normal;
+  max-width: 90rem;
+  margin: auto;
   margin-bottom: 3rem;
+  font-weight: variables.$fw-medium;
+  color: variables.$color-gray-dark;
+  text-align: center;
 }
 
 .name {
   font-size: 8rem;
   font-weight: variables.$fw-extra-bold;
-  max-width: 90rem;
   line-height: 1.2;
+  text-align: center;
+  color: variables.$color-secondary;
+  max-width: 140rem;
+  margin: auto;
   margin-bottom: 2rem;
 }
 
 .description {
   font-size: 2rem;
   font-weight: variables.$fw-normal;
-  max-width: 90rem;
   line-height: 1.5;
   color: variables.$color-gray-light;
-  margin-bottom: 3rem;
+  margin: auto;
+  margin-bottom: 4rem;
+  text-align: center;
+  max-width: 90rem;
 }
 
 .action {
   display: flex;
   align-items: center;
   gap: 2rem;
+  justify-content: center;
 }

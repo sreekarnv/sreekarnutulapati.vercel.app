@@ -12,7 +12,7 @@ const HomePage: NextPage = () => {
       <div className={classes.page}>
         <section>
           <div>
-            <h4 className={classes.wave}>👋</h4>
+            <h4 className={classes.wave}>Hi there 👋,</h4>
             <h3 className={classes.name}>
               I&apos;m a Full Stack Web & App Developer
             </h3>

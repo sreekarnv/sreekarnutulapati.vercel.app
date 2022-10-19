@@ -7,6 +7,6 @@ links:
     github: 'https://github.com/sreekarnv/burger-house',
     preview: 'https://burger-house-sreekar.netlify.app',
   }
-coverImage: '/projects/burger-house/cover.png'
+coverImage: 'https://res.cloudinary.com/dfesryh4w/image/upload/v1666187774/portfolio/burger-house.png'
 color: 'orangeGreen'
 ---
