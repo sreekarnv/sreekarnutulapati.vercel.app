@@ -5,7 +5,7 @@ import path from 'path';
 import fs from 'fs';
 import matter from 'gray-matter';
 import { Project } from '@/types/project';
-import Seo from '@/components/shared/seo';
+import Seo from '@/components/seo';
 
 interface WorkPageProps {
   projects: {

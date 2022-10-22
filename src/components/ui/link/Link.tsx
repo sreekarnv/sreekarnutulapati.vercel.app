@@ -1,9 +1,9 @@
-import Link from 'next/link';
+import NLink from 'next/link';
 import React from 'react';
 import { BsArrowUpRight } from 'react-icons/bs';
-import classes from '@/scss/components/main-navbar/main-navbar-link.module.scss';
+import classes from '@/scss/components/link/link.module.scss';
 
-interface MainNavbarLinkProps
+interface Link
   extends React.DetailedHTMLProps<
     React.AnchorHTMLAttributes<HTMLAnchorElement>,
     HTMLAnchorElement
@@ -14,24 +14,25 @@ interface MainNavbarLinkProps
   onClick?: () => void;
 }
 
-const MainNavbarLink: React.FC<MainNavbarLinkProps> = ({
+const Link: React.FC<Link> = ({
   href,
   text,
   icon = <BsArrowUpRight className={classes.icon} />,
   onClick,
+  ...props
 }) => {
   return (
     <>
       <li onClick={onClick}>
-        <Link href={href} passHref>
-          <a className={classes.root}>
+        <NLink href={href} passHref>
+          <a className={classes.root} {...props}>
             <span className={classes.text}>{text}</span>
             <span>{icon}</span>
           </a>
-        </Link>
+        </NLink>
       </li>
     </>
   );
 };
 
-export default MainNavbarLink;
+export default Link;

@@ -1,7 +1,7 @@
 import type { NextPage } from 'next';
-import Seo from '@/components/shared/seo';
+import Seo from '@/components/seo';
 import classes from '@/scss/pages/home/home.module.scss';
-import Button from '@/components/shared/button';
+import Button from '@/components/ui/button';
 import Link from 'next/link';
 
 const HomePage: NextPage = () => {

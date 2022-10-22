@@ -2,10 +2,10 @@ import React from 'react';
 import clsx from 'clsx';
 import classes from '@/scss/components/project-card/project-card.module.scss';
 import Image from 'next/image';
-import MainNavbarLink from '../main-navbar/MainNavbarLink';
 import { BsGithub, BsPlay } from 'react-icons/bs';
 import { Project } from '@/types/project';
-import { Tooltip } from '../shared/tooltip';
+import { Tooltip } from '@/components/ui/tooltip';
+import Link from '../ui/link';
 
 const gradients = {
   bluePink: classes.bluePink,
@@ -25,26 +25,24 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
 }) => {
   return (
     <>
-      <div className={clsx(classes.projectCard, gradients[gradient])}>
-        <div className={clsx(classes.projectCardStack)}>
+      <div className={clsx(classes.root, gradients[gradient])}>
+        <div className={clsx(classes.techStack)}>
           {project.techStack.map((project) => (
-            <div key={project.link}>
-              <Tooltip text={project.alt}>
-                <figure>
-                  <Image
-                    style={{ borderRadius: '50%' }}
-                    src={project.link}
-                    alt={project.alt}
-                    loading="lazy"
-                    height={30}
-                    width={30}
-                  />
-                </figure>
-              </Tooltip>
-            </div>
+            <Tooltip text={project.alt} key={project.link}>
+              <figure>
+                <Image
+                  style={{ borderRadius: '50%' }}
+                  src={project.link}
+                  alt={project.alt}
+                  loading="lazy"
+                  height={30}
+                  width={30}
+                />
+              </figure>
+            </Tooltip>
           ))}
         </div>
-        <figure className={classes.projectCardMedia}>
+        <figure className={classes.media}>
           <Image
             src={project.coverImage}
             alt={project.title}
@@ -53,16 +51,17 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
             width={1920}
           />
         </figure>
-        <h2 className={classes.projectCardTitle}>{project.title}</h2>
-        <p className={classes.projectCardDescription}>{project.description}</p>
-        <ul className={classes.projectCardCta}>
-          <MainNavbarLink
+        <h2 className={classes.title}>{project.title}</h2>
+        <p className={classes.description}>{project.description}</p>
+        <ul className={classes.cta}>
+          <Link
+            target="_blank"
             icon={<BsGithub size={20} />}
             text="Github"
             href={project.links.github}
           />
           {project.links.preview && (
-            <MainNavbarLink
+            <Link
               target="_blank"
               icon={<BsPlay size={20} />}
               text="Preview"
