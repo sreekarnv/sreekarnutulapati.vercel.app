@@ -34,4 +34,8 @@
   @include mixins.respond(tab-land) {
     margin-bottom: 4rem;
   }
+
+  @include mixins.respond(tab-port) {
+    grid-template-columns: repeat(auto-fill, minmax(30rem, 1fr));
+  }
 }
