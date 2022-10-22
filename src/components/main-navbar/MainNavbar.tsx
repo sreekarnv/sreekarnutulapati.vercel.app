@@ -1,9 +1,9 @@
-import Link from 'next/link';
 import React from 'react';
 import classes from '@/scss/components/main-navbar/main-navbar.module.scss';
-import Image from 'next/image';
 import MainNavbarLink from './MainNavbarLink';
 import MainDrawerMobile from './MainDrawerMobile';
+import Backdrop from '@/components/shared/backdrop';
+import Logo from '@/components/shared/logo/Logo';
 
 const MainNavbar: React.FC = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -11,34 +11,18 @@ const MainNavbar: React.FC = () => {
   return (
     <>
       <nav className={classes.root}>
-        {/* <MainDrawerMobile {...{ isOpen }} /> */}
-        <Link href="/">
-          <a className={classes.brand}>
-            <Image
-              className={classes.brandImage}
-              src="/logo.webp"
-              height={60}
-              width={60}
-              placeholder="blur"
-              blurDataURL={'/logo.webp'}
-              alt="Sreekar Nutulapati"
-            />
-            <div className={classes.brandContent}>
-              <span className={classes.brandContentName}>
-                Sreekar Nutulapati
-              </span>
-              <span className={classes.brandContentDesignation}>Developer</span>
-            </div>
-          </a>
-        </Link>
+        <Logo />
 
         <ul className={classes.nav}>
           <MainNavbarLink text="Home" href={'/'} />
-          <MainNavbarLink text="About Me" href={'/about'} />
           <MainNavbarLink text="My Work" href={'/work'} />
         </ul>
 
-        {/* <button onClick={() => setIsOpen(!isOpen)}>Toggle</button> */}
+        <MainDrawerMobile {...{ isOpen, setIsOpen }} />
+        <Backdrop show={isOpen} onClick={() => setIsOpen(false)} />
+        <button onClick={() => setIsOpen(!isOpen)} className={classes.toggler}>
+          <span className={classes.togglerIcon} />
+        </button>
       </nav>
     </>
   );

@@ -5,5 +5,5 @@ description: This web application allows BPHC students to view projects previous
 links: { github: 'https://github.com/sreekarnv/project-portal' }
 coverImage: 'https://res.cloudinary.com/dfesryh4w/image/upload/v1666187678/portfolio/bphc-project-portal.png'
 color: 'orangeGreen'
-techStack: [{ link: '/logos/react.png', alt: 'react' }]
+techStack: [{ link: '/logos/react.png', alt: 'ReactJS' }]
 ---

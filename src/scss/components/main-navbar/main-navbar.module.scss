@@ -26,47 +26,47 @@
   }
 }
 
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-}
+.toggler {
+  display: none;
 
-.brandImage {
-  width: 6rem;
-  height: 6rem;
-  border-radius: 50%;
+  @include mixins.respond(tab-land) {
+    display: flex;
 
-  @include mixins.respond(phone-lg) {
-    width: 2rem !important;
-    height: 2rem !important;
+    background-color: transparent;
+    border: none;
+    height: 5rem;
+    width: 5rem;
+
+    align-items: center;
+    justify-content: center;
   }
 }
 
-.brandContent {
-  display: flex;
-  flex-direction: column;
-}
+.togglerIcon {
+  background-color: variables.$color-gray-dark;
+  width: 3.5rem;
+  height: 4px;
+  border-radius: 10px;
+  position: relative;
 
-.brandContentName {
-  font-size: 2.25rem;
-  font-weight: variables.$fw-semi-bold;
-  margin-bottom: 1rem;
-  color: variables.$color-black;
-
-  @include mixins.respond(phone-lg) {
-    font-size: 2rem;
+  &::after,
+  &::before {
+    position: absolute;
+    content: '';
+    display: block;
+    background-color: variables.$color-gray-dark;
+    width: 3.5rem;
+    height: 4px;
+    border-radius: 10px;
   }
-}
 
-.brandContentDesignation {
-  font-size: 1.4rem;
-  font-weight: variables.$fw-medium;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  color: variables.$color-gray-light;
+  &::before {
+    top: -10px;
+    left: 0;
+  }
 
-  @include mixins.respond(phone-lg) {
-    font-size: 1.2rem;
+  &::after {
+    top: 10px;
+    left: 0;
   }
 }

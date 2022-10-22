@@ -11,8 +11,8 @@ coverImage: 'https://res.cloudinary.com/dfesryh4w/image/upload/v1666187796/portf
 color: 'bluePink'
 techStack:
   [
-    { link: '/logos/express.png', alt: 'express' },
-    { link: '/logos/gatsbyjs.svg', alt: 'gatsby' },
-    { link: '/logos/typescript.png', alt: 'typescript' },
+    { link: '/logos/express.png', alt: 'ExpressJS' },
+    { link: '/logos/gatsbyjs.svg', alt: 'GatsbyJS' },
+    { link: '/logos/typescript.png', alt: 'Typescript' },
   ]
 ---

@@ -7,8 +7,8 @@ coverImage: 'https://res.cloudinary.com/dfesryh4w/image/upload/v1666187815/portf
 color: 'bluePink'
 techStack:
   [
-    { link: '/logos/svelte.webp', alt: 'svelte' },
-    { link: '/logos/typescript.png', alt: 'typescript' },
-    { link: '/logos/python.jpg', alt: 'python' },
+    { link: '/logos/svelte.webp', alt: 'Svelte' },
+    { link: '/logos/typescript.png', alt: 'Typescript' },
+    { link: '/logos/python.jpg', alt: 'Python' },
   ]
 ---

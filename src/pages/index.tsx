@@ -24,13 +24,8 @@ const HomePage: NextPage = () => {
             </p>
 
             <div className={classes.action}>
-              <Link href="/about" passHref>
-                <Button size="large" variant="primary">
-                  About Me
-                </Button>
-              </Link>
               <Link href="/work" passHref>
-                <Button size="large" variant="secondary-outline">
+                <Button size="large" variant="primary-outline">
                   My Work
                 </Button>
               </Link>

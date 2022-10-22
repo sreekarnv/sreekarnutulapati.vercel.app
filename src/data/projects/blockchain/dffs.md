@@ -7,9 +7,9 @@ coverImage: 'https://res.cloudinary.com/dfesryh4w/image/upload/v1666187828/portf
 color: 'yellowPurple'
 techStack:
   [
-    { link: '/logos/react.png', alt: 'react' },
-    { link: '/logos/typescript.png', alt: 'typescript' },
-    { link: '/logos/truffle.jpg', alt: 'truffle' },
-    { link: '/logos/solidity.png', alt: 'solidity' },
+    { link: '/logos/react.png', alt: 'ReactJS' },
+    { link: '/logos/typescript.png', alt: 'Typescript' },
+    { link: '/logos/truffle.jpg', alt: 'Truffle' },
+    { link: '/logos/solidity.png', alt: 'Solidity' },
   ]
 ---
