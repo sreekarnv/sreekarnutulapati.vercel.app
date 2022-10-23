@@ -41,32 +41,3 @@
     justify-content: center;
   }
 }
-
-.togglerIcon {
-  background-color: variables.$color-gray-dark;
-  width: 3rem;
-  height: 3.5px;
-  border-radius: 10px;
-  position: relative;
-
-  &::after,
-  &::before {
-    position: absolute;
-    content: '';
-    display: block;
-    background-color: variables.$color-gray-dark;
-    width: 3rem;
-    height: 3.5px;
-    border-radius: 10px;
-  }
-
-  &::before {
-    top: -10px;
-    left: 0;
-  }
-
-  &::after {
-    top: 10px;
-    left: 0;
-  }
-}

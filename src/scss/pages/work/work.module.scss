@@ -10,16 +10,34 @@
 
   @include mixins.respond(phone-lg) {
     padding: 1rem 2rem;
+    padding-top: 6rem;
   }
 }
 
 .heading {
-  margin-bottom: 3rem;
-  font-size: 5rem;
+  font-size: 8rem;
   text-transform: uppercase;
+  color: variables.$color-secondary;
+
+  @include mixins.respond(desktop-sm) {
+    font-size: 6.5rem;
+  }
+
+  @include mixins.respond(laptop-md) {
+    font-size: 5.5rem;
+  }
+
+  @include mixins.respond(laptop-md) {
+    font-size: 4.5rem;
+  }
 
   @include mixins.respond(tab-land) {
     font-size: 3rem;
+  }
+
+  @include mixins.respond(tab-port) {
+    font-size: 2.75rem;
+    text-align: start;
   }
 }
 

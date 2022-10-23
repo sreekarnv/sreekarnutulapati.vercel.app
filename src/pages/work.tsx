@@ -6,6 +6,7 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import { Project } from '@/types/project';
 import Seo from '@/components/seo';
+import useAccordion from '@/hooks/useAccordion';
 
 interface WorkPageProps {
   projects: {
@@ -16,47 +17,75 @@ interface WorkPageProps {
 }
 
 const WorkPage: NextPage<WorkPageProps> = ({ projects }) => {
+  const { accordions } = useAccordion({
+    tabs: [
+      {
+        header: (
+          <>
+            <h1 className={classes.heading}>Full Stack Projects</h1>
+          </>
+        ),
+        content: (
+          <>
+            <section className={classes.projectSection}>
+              {projects.fullStack.map((project) => (
+                <ProjectCard
+                  gradient={project.color}
+                  key={project.id}
+                  project={project}
+                />
+              ))}
+            </section>
+          </>
+        ),
+      },
+      {
+        header: (
+          <>
+            <h1 className={classes.heading}>Blockchain Projects</h1>
+          </>
+        ),
+        content: (
+          <>
+            <section className={classes.projectSection}>
+              {projects.blockchain.map((project) => (
+                <ProjectCard
+                  gradient={project.color}
+                  key={project.id}
+                  project={project}
+                />
+              ))}
+            </section>
+          </>
+        ),
+      },
+      {
+        header: (
+          <>
+            <h1 className={classes.heading}>Frontend Projects</h1>
+          </>
+        ),
+        content: (
+          <>
+            <section className={classes.projectSection}>
+              {projects.frontend.map((project) => (
+                <ProjectCard
+                  gradient={project.color}
+                  key={project.id}
+                  project={project}
+                />
+              ))}
+            </section>
+          </>
+        ),
+      },
+    ],
+  });
+
   return (
     <>
       <Seo title="Work" />
-      <div className={classes.page}>
-        <div>
-          <h1 className={classes.heading}>Full Stack Projects</h1>
-          <section className={classes.projectSection}>
-            {projects.fullStack.map((project) => (
-              <ProjectCard
-                gradient={project.color}
-                key={project.id}
-                project={project}
-              />
-            ))}
-          </section>
-        </div>
-        <div>
-          <h1 className={classes.heading}>Blockchain Projects</h1>
-          <section className={classes.projectSection}>
-            {projects.blockchain.map((project) => (
-              <ProjectCard
-                gradient={project.color}
-                key={project.id}
-                project={project}
-              />
-            ))}
-          </section>
-        </div>
-        <div>
-          <h1 className={classes.heading}>Frontend Projects</h1>
-          <section className={classes.projectSection}>
-            {projects.frontend.map((project) => (
-              <ProjectCard
-                gradient={project.color}
-                key={project.id}
-                project={project}
-              />
-            ))}
-          </section>
-        </div>
-      </div>
+      <div className={classes.page}>{accordions}</div>
     </>
   );
 };
