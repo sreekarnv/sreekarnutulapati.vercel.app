@@ -9,6 +9,7 @@ links:
   }
 coverImage: 'https://res.cloudinary.com/dfesryh4w/image/upload/v1666187838/portfolio/did-you-git-it.png'
 color: 'bluePink'
+domains: ['frontend']
 techStack:
   [
     { link: '/logos/nextjs.png', alt: 'NextJS' },

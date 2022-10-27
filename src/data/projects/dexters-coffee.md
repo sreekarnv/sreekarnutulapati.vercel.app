@@ -5,6 +5,7 @@ description: It is a decentralized blockchain-finance based application to store
 links: { github: 'https://github.com/sreekarnv/blockchain' }
 coverImage: 'https://res.cloudinary.com/dfesryh4w/image/upload/v1666187815/portfolio/dexters-coffee.png'
 color: 'bluePink'
+domains: ['blockchain', 'frontend']
 techStack:
   [
     { link: '/logos/svelte.webp', alt: 'Svelte' },

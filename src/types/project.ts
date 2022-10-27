@@ -14,4 +14,5 @@ export type Project = {
     link: string;
     alt: string;
   }[];
+  domains: string[];
 };

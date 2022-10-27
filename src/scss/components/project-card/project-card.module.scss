@@ -1,38 +1,6 @@
 @use '../../variables/main.scss' as variables;
 @use '../../mixins/main.scss' as mixins;
 
-.bluePink {
-  background: linear-gradient(
-    180deg,
-    map-get(variables.$gradients, 'blue-pink', 'from'),
-    map-get(variables.$gradients, 'blue-pink', 'to')
-  );
-}
-
-.greenBlue {
-  background: linear-gradient(
-    180deg,
-    map-get(variables.$gradients, 'green-blue', 'from'),
-    map-get(variables.$gradients, 'green-blue', 'to')
-  );
-}
-
-.orangeGreen {
-  background: linear-gradient(
-    180deg,
-    map-get(variables.$gradients, 'orange-green', 'from'),
-    map-get(variables.$gradients, 'orange-green', 'to')
-  );
-}
-
-.yellowPurple {
-  background: linear-gradient(
-    180deg,
-    map-get(variables.$gradients, 'yellow-purple', 'from'),
-    map-get(variables.$gradients, 'yellow-purple', 'to')
-  );
-}
-
 .root {
   padding: 2rem 1.5rem;
   border-radius: 10px;
@@ -57,16 +25,15 @@
 
 .title {
   font-size: 2.5rem;
-  margin-bottom: 0.5rem;
-  height: 6rem;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
   display: flex;
   align-items: center;
 }
 
 .description {
   font-size: 1.55rem;
-  margin-bottom: 1.75rem;
-  min-height: 15rem;
+  margin-bottom: 3rem;
   display: flex;
   line-height: 1.6;
   color: variables.$color-gray-dark;
