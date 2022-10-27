@@ -9,6 +9,7 @@ links:
   }
 coverImage: 'https://res.cloudinary.com/dfesryh4w/image/upload/v1666187796/portfolio/connected.png'
 color: 'bluePink'
+domains: ['full-stack']
 techStack:
   [
     { link: '/logos/express.png', alt: 'ExpressJS' },
