@@ -11,6 +11,7 @@ import Fuse from 'fuse.js';
 import matter from 'gray-matter';
 import type { GetStaticProps, NextPage } from 'next';
 import path from 'path';
+import { getPlaiceholder } from 'plaiceholder';
 import React from 'react';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 import slugify from 'slugify';
@@ -116,22 +117,29 @@ const WorkPage: NextPage<WorkPageProps> = ({ projects }) => {
 export const getStaticProps: GetStaticProps = async () => {
   const projectsDir = fs.readdirSync(path.join('src/data/projects'));
 
-  const projects = projectsDir.map((filename) => {
+  const projects = projectsDir.map(async (filename) => {
     const markdownWithMetadata = fs
       .readFileSync(path.join('src/data/projects/', filename))
       .toString();
 
     const parsedMarkdown = matter(markdownWithMetadata);
 
+    const { data } = parsedMarkdown;
+
+    const image = await getPlaiceholder(data.coverImage);
+
     return {
       ...parsedMarkdown.data,
+      image,
       slug: filename.replace('.md', ''),
     };
   });
 
+  const projectsData = await Promise.all(projects);
+
   return {
     props: {
-      projects,
+      projects: projectsData,
     },
   };
 };
