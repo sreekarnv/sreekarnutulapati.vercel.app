@@ -17,11 +17,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
       <div className={clsx(classes.root)}>
         <figure className={classes.media}>
           <Image
-            src={project.coverImage}
+            blurDataURL={project.image.base64}
+            placeholder="blur"
+            src={project.image.img.src}
             alt={project.title}
             loading="lazy"
-            height={1080}
-            width={1920}
+            height={project.image.img.height}
+            width={project.image.img.width}
           />
         </figure>
         <div className={clsx(classes.techStack)}>

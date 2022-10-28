@@ -27,3 +27,8 @@
   width: 1.5rem;
   font-size: 1.5rem;
 }
+
+.active {
+  border-top: 2px solid variables.$color-primary;
+  color: variables.$color-primary;
+}
