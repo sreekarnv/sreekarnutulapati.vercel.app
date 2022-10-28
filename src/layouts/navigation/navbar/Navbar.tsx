@@ -1,8 +1,8 @@
 import Link from '@/components/ui/link';
 import Logo from '@/components/ui/logo';
+import classes from '@/scss/layouts/navbar/navbar.module.scss';
 import React from 'react';
 import { HiMenu } from 'react-icons/hi';
-import classes from '@/scss/layouts/navbar/navbar.module.scss';
 
 interface NavbarProps {
   isOpen: boolean;

@@ -28,14 +28,13 @@
     @include mixins.outline-button(
       $color-bg: $colorKey,
       $color-text: $colorKey,
-      $color-hover-bg: $colorKey,
-      $color-hover-text: variables.$color-white
+      $color-hover-bg: $colorKey
     );
   }
 }
 
 .large {
-  padding: 2rem 3.5rem;
+  padding: 1.5rem 3rem;
   font-size: 1.8rem;
 }
 

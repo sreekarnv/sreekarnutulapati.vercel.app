@@ -1,22 +1,43 @@
 import ProjectCard from '@/components/project-card';
-import type { GetStaticProps, NextPage } from 'next';
-import classes from '@/scss/pages/work/work.module.scss';
-import path from 'path';
-import fs from 'fs';
-import matter from 'gray-matter';
-import { Project } from '@/types/project';
 import Seo from '@/components/seo';
 import Tab from '@/components/ui/tabs/Tab';
 import Tabs from '@/components/ui/tabs/Tabs';
 import useTab from '@/hooks/useTab';
+import classes from '@/scss/pages/work/work.module.scss';
+import { Project } from '@/types/project';
+import { motion, Variants } from 'framer-motion';
+import fs from 'fs';
 import Fuse from 'fuse.js';
-import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
+import matter from 'gray-matter';
+import type { GetStaticProps, NextPage } from 'next';
+import path from 'path';
 import React from 'react';
+import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 import slugify from 'slugify';
 
 interface WorkPageProps {
   projects: Project[];
 }
+
+const projectsListVariant: Variants = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+  },
+};
+
+const projectsTabVariant: Variants = {
+  hidden: { opacity: 0, y: 10 },
+  show: {
+    y: 0,
+    opacity: 1,
+  },
+};
+
+const projectItemVariant: Variants = {
+  hidden: { opacity: 0, y: 10 },
+  show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+};
 
 const WorkPage: NextPage<WorkPageProps> = ({ projects }) => {
   const { activeTab, handleTabChange } = useTab();
@@ -36,37 +57,57 @@ const WorkPage: NextPage<WorkPageProps> = ({ projects }) => {
     <>
       <Seo title="Work" />
       <div className={classes.page}>
-        <Tabs className={classes.tabs}>
-          {['All', 'Frontend', 'Full Stack', 'Blockchain'].map((t, i) => (
-            <Tab
-              isActive={activeTab === i}
-              label={t}
-              key={t}
-              onClick={() => {
-                if (t === 'All') return setActiveProjects(projects);
+        <motion.div
+          variants={projectsTabVariant}
+          initial="hidden"
+          animate="show"
+        >
+          <Tabs className={classes.tabs}>
+            {['All', 'Frontend', 'Full Stack', 'Blockchain'].map((t, i) => (
+              <Tab
+                isActive={activeTab === i}
+                label={t}
+                key={t}
+                onClick={() => {
+                  if (t === 'All') {
+                    setActiveProjects(projects);
+                    handleTabChange(0);
+                    return;
+                  }
 
-                const filteredProjects = fuseRef.current
-                  ?.search(slugify(t))
-                  .map((p) => p.item) as Project[];
+                  const filteredProjects = fuseRef.current
+                    ?.search(slugify(t))
+                    .map((p) => p.item) as Project[];
 
-                setActiveProjects(filteredProjects);
-                handleTabChange(i);
-              }}
-            />
-          ))}
-        </Tabs>
+                  setActiveProjects(filteredProjects);
+                  handleTabChange(i);
+                }}
+              />
+            ))}
+          </Tabs>
+        </motion.div>
 
-        <section>
+        <motion.section
+          initial="hidden"
+          animate="show"
+          variants={projectsListVariant}
+        >
           <ResponsiveMasonry
             columnsCountBreakPoints={{ 450: 1, 750: 2, 1200: 3, 1500: 4 }}
           >
             <Masonry gutter="2rem">
               {activeProjects.map((project) => (
-                <ProjectCard key={project.id} project={project} />
+                <motion.div
+                  key={project.id}
+                  layout
+                  variants={projectItemVariant}
+                >
+                  <ProjectCard project={project} key={project.id} />
+                </motion.div>
               ))}
             </Masonry>
           </ResponsiveMasonry>
-        </section>
+        </motion.section>
       </div>
     </>
   );
