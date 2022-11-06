@@ -84,8 +84,7 @@ const ContactPage: NextPage = ({}) => {
         <motion.div className={classes.content} variants={contactChild}>
           <h1>Get in touch</h1>
           <p>
-            Fill out the form below and I&apos;ll get back to you as soon as I
-            can.
+            Fill out the form and I&apos;ll get back to you as soon as I can.
           </p>
           <p>
             Alternatively, you can email me at{' '}

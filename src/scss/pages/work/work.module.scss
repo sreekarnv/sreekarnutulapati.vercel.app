@@ -14,18 +14,42 @@
   }
 }
 
+.techStack {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.list {
+  grid-gap: 3rem;
+  margin-top: 5rem;
+  margin-bottom: 8rem;
+
+  display: grid;
+  align-items: center;
+  justify-content: center;
+
+  @include mixins.respond(desktop) {
+    grid-template-columns: 1fr;
+  }
+}
+
 .tabs {
   justify-content: center;
   margin-bottom: 3rem;
 }
 
 .heading {
-  font-size: 8rem;
+  font-size: 5rem;
   text-transform: uppercase;
   color: variables.$color-secondary;
+  text-align: center;
+  margin-bottom: 3rem;
 
   @include mixins.respond(desktop-sm) {
-    font-size: 6.5rem;
+    font-size: 3.5rem;
   }
 
   @include mixins.respond(laptop-md) {
@@ -34,14 +58,5 @@
 
   @include mixins.respond(laptop-md) {
     font-size: 4.5rem;
-  }
-
-  @include mixins.respond(tab-land) {
-    font-size: 3rem;
-  }
-
-  @include mixins.respond(tab-port) {
-    font-size: 2.75rem;
-    text-align: start;
   }
 }

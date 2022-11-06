@@ -5,11 +5,16 @@
   padding: 2rem 1.5rem;
   border-radius: 10px;
   position: relative;
+  min-height: 56rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .techStack {
   display: flex;
   justify-content: flex-end;
+  align-items: center;
   gap: 1rem;
   margin-bottom: 1rem;
 }
@@ -23,12 +28,14 @@
   margin-bottom: 1rem;
 }
 
+.content {
+  flex: 1;
+}
+
 .title {
   font-size: 2.5rem;
   margin-bottom: 1.5rem;
   margin-top: 1.5rem;
-  display: flex;
-  align-items: center;
 }
 
 .description {
@@ -41,6 +48,6 @@
 
 .cta {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   gap: 2rem;
 }

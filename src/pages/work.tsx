@@ -2,8 +2,9 @@ import ProjectCard from '@/components/project-card';
 import Seo from '@/components/seo';
 import Tab from '@/components/ui/tabs/Tab';
 import Tabs from '@/components/ui/tabs/Tabs';
+import WorkCard from '@/components/work-card/WorkCard';
 import useTab from '@/hooks/useTab';
-import classes from '@/scss/pages/projects/projects.module.scss';
+import classes from '@/scss/pages/work/work.module.scss';
 import { Project } from '@/types/project';
 import { motion, Variants } from 'framer-motion';
 import fs from 'fs';
@@ -18,6 +19,7 @@ import slugify from 'slugify';
 
 interface WorkPageProps {
   projects: Project[];
+  work: Project[];
 }
 
 const projectsListVariant: Variants = {
@@ -40,7 +42,7 @@ const projectItemVariant: Variants = {
   show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
 };
 
-const WorkPage: NextPage<WorkPageProps> = ({ projects }) => {
+const WorkPage: NextPage<WorkPageProps> = ({ projects, work }) => {
   const { activeTab, handleTabChange } = useTab();
   const [activeProjects, setActiveProjects] =
     React.useState<Project[]>(projects);
@@ -63,6 +65,28 @@ const WorkPage: NextPage<WorkPageProps> = ({ projects }) => {
           initial="hidden"
           animate="show"
         >
+          <h1 className={classes.heading}>Work Experience</h1>
+
+          <motion.section
+            className={classes.list}
+            initial="hidden"
+            animate="show"
+            variants={projectsListVariant}
+          >
+            {work.map((project) => (
+              <motion.div key={project.id} layout variants={projectItemVariant}>
+                <WorkCard work={project} key={project.id} />
+              </motion.div>
+            ))}
+          </motion.section>
+        </motion.div>
+
+        <motion.div
+          variants={projectsTabVariant}
+          initial="hidden"
+          animate="show"
+        >
+          <h1 className={classes.heading}>Projects</h1>
           <Tabs className={classes.tabs}>
             {['All', 'Frontend', 'Full Stack', 'Blockchain'].map((t, i) => (
               <Tab
@@ -116,6 +140,7 @@ const WorkPage: NextPage<WorkPageProps> = ({ projects }) => {
 
 export const getStaticProps: GetStaticProps = async () => {
   const projectsDir = fs.readdirSync(path.join('src/data/projects'));
+  const workDir = fs.readdirSync(path.join('src/data/work'));
 
   const projects = projectsDir.map(async (filename) => {
     const markdownWithMetadata = fs
@@ -135,10 +160,30 @@ export const getStaticProps: GetStaticProps = async () => {
     };
   });
 
+  const work = workDir.map(async (filename) => {
+    const markdownWithMetadata = fs
+      .readFileSync(path.join('src/data/work/', filename))
+      .toString();
+
+    const parsedMarkdown = matter(markdownWithMetadata);
+
+    const { data } = parsedMarkdown;
+
+    const image = await getPlaiceholder(data.coverImage);
+
+    return {
+      ...parsedMarkdown.data,
+      image,
+      slug: filename.replace('.md', ''),
+    };
+  });
+
   const projectsData = await Promise.all(projects);
+  const workData = await Promise.all(work);
 
   return {
     props: {
+      work: workData,
       projects: projectsData,
     },
   };

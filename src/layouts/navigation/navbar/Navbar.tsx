@@ -17,8 +17,8 @@ const Navbar: React.FC<NavbarProps> = ({ isOpen, setIsOpen }) => {
 
         <ul className={classes.nav}>
           <Link text="Home" href={'/'} />
-          <Link text="Projects" href={'/projects'} />
-          <Link text="About" href={'/about'} />
+          <Link text="Work" href={'/work'} />
+          <Link text="About Me" href={'/about'} />
           <Link text="Contact" href={'/contact'} />
         </ul>
 

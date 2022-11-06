@@ -58,8 +58,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
             />
             <Link
               textIcon={<HiOutlineViewGrid size={24} />}
-              href="/projects"
-              text="Projects"
+              href="/work"
+              text="Work"
               onClick={() => setIsOpen(false)}
             />
             <Link

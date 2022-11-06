@@ -1,10 +1,11 @@
 @use '../../variables/main.scss' as variables;
+@use '../../mixins/main.scss' as mixins;
 
 .root {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-width: 10rem;
+  min-width: 13rem;
   padding-top: 1rem;
   border-top: 2px solid variables.$color-gray-dark;
   color: variables.$color-black;
@@ -14,6 +15,10 @@
   &:hover {
     color: variables.$color-primary;
     border-top: 2px solid variables.$color-primary;
+  }
+
+  @include mixins.respond(desktop-sm) {
+    min-width: 11rem;
   }
 }
 

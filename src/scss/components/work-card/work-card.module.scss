@@ -1,0 +1,66 @@
+@use '../../variables/main.scss' as variables;
+@use '../../mixins/main.scss' as mixins;
+
+.root {
+  border-radius: 10px;
+  position: relative;
+  padding: 2rem 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 3rem;
+  max-width: 90rem;
+
+  @include mixins.respond(tab-land) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.role {
+  text-transform: uppercase;
+  font-weight: variables.$fw-bold;
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  display: block;
+  text-align: end;
+}
+
+.techStack {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+  justify-content: flex-end;
+}
+
+.content {
+  margin-bottom: 3rem;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.description {
+  font-size: 1.55rem;
+  display: flex;
+  line-height: 1.6;
+  color: variables.$color-gray-dark;
+  margin-bottom: 1.5rem;
+}
+
+.cta {
+  display: flex;
+  align-items: flex-end;
+  gap: 2rem;
+}
+
+.media {
+  box-shadow: 0 0 10px 0 rgba(variables.$color-black, 0.2);
+  border-radius: 10px;
+
+  @include mixins.respond(tab-land) {
+    order: -1;
+  }
+}

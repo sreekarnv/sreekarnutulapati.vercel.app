@@ -48,7 +48,7 @@ const HomePage: NextPage = () => {
 
               <Link href="/projects" passHref>
                 <Button size="large" variant="secondary">
-                  My Projects
+                  My Work
                 </Button>
               </Link>
             </motion.div>

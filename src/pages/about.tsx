@@ -44,8 +44,8 @@ const AboutPage: NextPage = ({}) => {
           at CleverTap.
         </motion.p>
         <motion.div variants={aboutChild} className={classes.cta}>
-          <Link href="/projects" passHref>
-            <Button variant="secondary-outline">My Projects</Button>
+          <Link href="/work" passHref>
+            <Button variant="secondary-outline">My Work</Button>
           </Link>
 
           <Link href="/contact" passHref>
