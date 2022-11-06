@@ -3,7 +3,7 @@ import Seo from '@/components/seo';
 import Tab from '@/components/ui/tabs/Tab';
 import Tabs from '@/components/ui/tabs/Tabs';
 import useTab from '@/hooks/useTab';
-import classes from '@/scss/pages/work/work.module.scss';
+import classes from '@/scss/pages/projects/projects.module.scss';
 import { Project } from '@/types/project';
 import { motion, Variants } from 'framer-motion';
 import fs from 'fs';

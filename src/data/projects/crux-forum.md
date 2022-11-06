@@ -1,7 +1,7 @@
 ---
 id: crux-forum
 title: Crux Forum
-description: A web application created specifically to keep students at the BITS Pilani Hyderabad Campus informed of activities and announcements from various campus groups.
+description: A web application created specifically to keep students at the BITS Pilani Hyderabad Campus informed of activities and announcements from various campus groups. This app is built with Next JS, Express JS, MongoDB and GraphQL
 links:
   {
     github: 'https://github.com/crux-bphc/crux-forum-website',

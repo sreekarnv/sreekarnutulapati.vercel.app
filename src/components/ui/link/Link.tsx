@@ -13,6 +13,7 @@ interface Link
   href: string;
   text: string;
   icon?: React.ReactNode;
+  textIcon?: React.ReactNode;
   onClick?: () => void;
 }
 
@@ -21,6 +22,7 @@ const Link: React.FC<Link> = ({
   text,
   icon = <BsArrowUpRight className={classes.icon} />,
   onClick,
+  textIcon,
   ...props
 }) => {
   const router = useRouter();
@@ -36,7 +38,10 @@ const Link: React.FC<Link> = ({
             ])}
             {...props}
           >
-            <span className={classes.text}>{text}</span>
+            <span className={classes.content}>
+              <span>{textIcon}</span>
+              <p className={classes.text}>{text}</p>
+            </span>
             <span>{icon}</span>
           </a>
         </NLink>

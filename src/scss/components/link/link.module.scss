@@ -17,6 +17,12 @@
   }
 }
 
+.content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .text {
   font-size: 1.6rem;
   font-weight: variables.$fw-bold;

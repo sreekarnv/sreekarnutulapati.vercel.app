@@ -1,5 +1,6 @@
 import BaseLayout from '@/layouts/base-layout';
 import '@/scss/base/main.scss';
+import '@/scss/vendors/main.scss';
 import type { AppProps } from 'next/app';
 import React from 'react';
 
