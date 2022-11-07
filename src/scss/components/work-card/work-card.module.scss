@@ -8,6 +8,8 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 3rem;
+
+  border: 1px solid rgba(variables.$color-gray-light, 0.15);
   max-width: 90rem;
 
   @include mixins.respond(tab-land) {
@@ -19,7 +21,7 @@
   text-transform: uppercase;
   font-weight: variables.$fw-bold;
   font-size: 1.4rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   display: block;
   text-align: end;
 }

@@ -3,6 +3,7 @@ import classes from '@/scss/pages/about/about.module.scss';
 import { motion, Variants } from 'framer-motion';
 import Button from '@/components/ui/button';
 import Link from 'next/link';
+import Seo from '@/components/seo';
 
 const about: Variants = {
   hidden: { opacity: 0 },
@@ -17,6 +18,7 @@ const aboutChild: Variants = {
 const AboutPage: NextPage = ({}) => {
   return (
     <>
+      <Seo title="About Me" />
       <motion.div
         className={classes.page}
         variants={about}

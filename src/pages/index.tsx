@@ -18,7 +18,7 @@ const homeContentChild: Variants = {
 const HomePage: NextPage = () => {
   return (
     <>
-      <Seo title="Home" />
+      <Seo />
 
       <div className={classes.page}>
         <section>

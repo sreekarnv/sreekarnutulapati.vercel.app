@@ -20,7 +20,6 @@ const WorkCard: React.FC<WorkCardProps> = ({ work }) => {
         <div>
           <div className={classes.content}>
             <h2 className={classes.title}>{work.title}</h2>
-            <small className={classes.role}>{work.domains[0]} Developer</small>
             <div className={classes.techStack}>
               {work.techStack.map((work) => (
                 <Tooltip text={work.alt} key={work.link}>
@@ -37,6 +36,7 @@ const WorkCard: React.FC<WorkCardProps> = ({ work }) => {
                 </Tooltip>
               ))}
             </div>
+            <small className={classes.role}>{work.domains[0]} Developer</small>
             <p className={classes.description}>{work.description}</p>
           </div>
           <ul className={classes.cta}>

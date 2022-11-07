@@ -22,18 +22,20 @@
   margin-bottom: 1rem;
 }
 
-.list {
+.workList {
   grid-gap: 3rem;
   margin-top: 5rem;
   margin-bottom: 8rem;
 
-  display: grid;
+  display: flex;
   align-items: center;
-  justify-content: center;
+  flex-direction: column;
+}
 
-  @include mixins.respond(desktop) {
-    grid-template-columns: 1fr;
-  }
+.projectsList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+  grid-gap: 3rem;
 }
 
 .tabs {

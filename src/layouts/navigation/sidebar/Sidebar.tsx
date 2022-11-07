@@ -57,15 +57,15 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
               onClick={() => setIsOpen(false)}
             />
             <Link
-              textIcon={<HiOutlineViewGrid size={24} />}
-              href="/work"
-              text="Work"
-              onClick={() => setIsOpen(false)}
-            />
-            <Link
               textIcon={<HiOutlineInformationCircle size={24} />}
               href="/about"
               text="About Me"
+              onClick={() => setIsOpen(false)}
+            />
+            <Link
+              textIcon={<HiOutlineViewGrid size={24} />}
+              href="/work"
+              text="Work"
               onClick={() => setIsOpen(false)}
             />
             <Link

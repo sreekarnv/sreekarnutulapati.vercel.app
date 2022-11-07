@@ -5,10 +5,16 @@
   padding: 2rem 1.5rem;
   border-radius: 10px;
   position: relative;
-  min-height: 56rem;
+  min-height: 60rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  border: 1px solid rgba(variables.$color-gray-light, 0.15);
+
+  @include mixins.respond(tab-land) {
+    min-height: 0;
+  }
 }
 
 .techStack {
