@@ -22,7 +22,11 @@ const Navbar: React.FC<NavbarProps> = ({ isOpen, setIsOpen }) => {
           <Link text="Contact" href={'/contact'} />
         </ul>
 
-        <button onClick={() => setIsOpen(!isOpen)} className={classes.toggler}>
+        <button
+          aria-label="Menu Toggle"
+          onClick={() => setIsOpen(!isOpen)}
+          className={classes.toggler}
+        >
           <HiMenu size={20} />
         </button>
       </nav>
