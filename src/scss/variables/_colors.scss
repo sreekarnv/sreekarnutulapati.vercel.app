@@ -1,8 +1,9 @@
 $color-white: #ffffff;
 $color-black: #000000;
 
-$color-primary: #658cf6;
+$color-primary: #0099e2;
 $color-secondary: #101830;
+$color-danger: #ff4d4d;
 
 $color-gray-light: #667085;
 $color-gray-dark: #3f4551;
@@ -10,6 +11,7 @@ $color-gray-dark: #3f4551;
 $colors-theme: (
   'primary': $color-primary,
   'secondary': $color-secondary,
+  'danger': $color-danger,
 );
 
 $colors-neutral: (

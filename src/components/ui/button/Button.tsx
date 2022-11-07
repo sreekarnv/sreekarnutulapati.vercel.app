@@ -22,11 +22,18 @@ interface ButtonProps
   hasElevation?: boolean;
   variant?: keyof typeof variants;
   size?: keyof typeof sizes;
+  isLoading?: boolean;
 }
 
 const Button = React.forwardRef(
   (props: ButtonProps, ref: React.Ref<HTMLButtonElement>) => {
-    const { hasElevation, variant = 'primary', size = 'medium' } = props;
+    const {
+      isLoading,
+      hasElevation,
+      variant = 'primary',
+      size = 'medium',
+      ...rest
+    } = props;
 
     return (
       <button
@@ -36,8 +43,10 @@ const Button = React.forwardRef(
           sizes[size],
         ])}
         ref={ref}
-        {...props}
-      />
+        {...rest}
+      >
+        {isLoading ? 'Loading...' : rest.children}
+      </button>
     );
   }
 );

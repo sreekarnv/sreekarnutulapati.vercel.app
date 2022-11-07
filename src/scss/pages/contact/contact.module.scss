@@ -1,0 +1,71 @@
+@use '../../variables/main.scss' as variables;
+@use '../../mixins/main.scss' as mixins;
+
+.page {
+  padding: 5rem 10rem;
+
+  display: flex;
+  justify-content: space-between;
+
+  @include mixins.respond(laptop-md) {
+    padding: 4rem;
+    gap: 1rem;
+  }
+
+  @include mixins.respond(tab-land) {
+    padding: 3rem;
+
+    flex-direction: column;
+  }
+
+  @include mixins.respond(phone-lg) {
+    padding: 1rem 2rem;
+  }
+}
+
+.content {
+  flex-basis: 50%;
+}
+
+.form {
+  flex-basis: 40%;
+
+  @include mixins.respond(laptop-md) {
+    flex-basis: 50%;
+  }
+
+  @include mixins.respond(phone-lg) {
+    padding-bottom: 1.5rem;
+  }
+}
+
+.form div {
+  margin-bottom: 2rem;
+}
+
+.content h1 {
+  font-size: 5rem;
+  font-weight: 500;
+  margin-bottom: 3.5rem;
+
+  @include mixins.respond(tab-land) {
+    font-size: 3.5rem;
+    margin-top: 2rem;
+  }
+}
+
+.content p {
+  font-size: 2.5rem;
+  line-height: 1.5;
+  margin-bottom: 3rem;
+
+  @include mixins.respond(tab-land) {
+    font-size: 2rem;
+  }
+}
+
+.content p a {
+  text-decoration: underline;
+  transition: all 0.3s ease-out;
+  color: variables.$color-primary;
+}

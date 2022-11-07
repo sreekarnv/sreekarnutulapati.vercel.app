@@ -1,7 +1,7 @@
 ---
 id: nue
 title: Nue
-description: Nue is a web application messaging app built for both desktop browsers and mobile devices.
+description: Nue is a whatsapp inspired web application messaging app built using GraphQL subscriptions (technology based on websocket protocol) supporting both browser built with NextJS) and mobile platforms (React Native - Expo)
 links:
   {
     github: 'https://github.com/sreekarnv/nue',

@@ -1,7 +1,7 @@
 ---
 id: did-you-git-it
 title: Did You Git It
-description: A Landing Page for Open Source Event Conducted by Clubs in BPHC.
+description: A landing page for an open source event hosted by clubs of BITS Pilani, Hyderabad Campus. This static website was built with NextJS and TailwindCSS
 links:
   {
     github: 'https://github.com/crux-bphc/DidYouGitIt',

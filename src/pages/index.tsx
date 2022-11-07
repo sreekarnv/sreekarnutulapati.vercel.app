@@ -40,8 +40,14 @@ const HomePage: NextPage = () => {
             </motion.p>
 
             <motion.div variants={homeContentChild} className={classes.action}>
-              <Link href="/work" passHref>
+              <Link href="/about" passHref>
                 <Button size="large" variant="primary-outline">
+                  About Me
+                </Button>
+              </Link>
+
+              <Link href="/projects" passHref>
+                <Button size="large" variant="secondary">
                   My Work
                 </Button>
               </Link>

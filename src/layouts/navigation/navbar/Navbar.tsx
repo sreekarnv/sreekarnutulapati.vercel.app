@@ -17,7 +17,9 @@ const Navbar: React.FC<NavbarProps> = ({ isOpen, setIsOpen }) => {
 
         <ul className={classes.nav}>
           <Link text="Home" href={'/'} />
-          <Link text="My Work" href={'/work'} />
+          <Link text="Work" href={'/work'} />
+          <Link text="About Me" href={'/about'} />
+          <Link text="Contact" href={'/contact'} />
         </ul>
 
         <button onClick={() => setIsOpen(!isOpen)} className={classes.toggler}>

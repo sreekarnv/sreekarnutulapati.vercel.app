@@ -15,42 +15,48 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
     <>
       <div className={clsx(classes.root)}>
-        <figure className={classes.media}>
-          <Image
-            blurDataURL={project.image.base64}
-            placeholder="blur"
-            src={project.image.img.src}
-            alt={project.title}
-            loading="lazy"
-            height={project.image.img.height}
-            width={project.image.img.width}
-          />
-        </figure>
-        <div className={clsx(classes.techStack)}>
-          {project.techStack.map((project) => (
-            <Tooltip text={project.alt} key={project.link}>
-              <figure>
-                <Image
-                  style={{ borderRadius: '50%' }}
-                  src={project.link}
-                  alt={project.alt}
-                  loading="lazy"
-                  height={30}
-                  width={30}
-                />
-              </figure>
-            </Tooltip>
-          ))}
+        <div>
+          <figure className={classes.media}>
+            <Image
+              blurDataURL={project.image.base64}
+              placeholder="blur"
+              src={project.image.img.src}
+              alt={project.title}
+              loading="lazy"
+              height={project.image.img.height}
+              width={project.image.img.width}
+            />
+          </figure>
+          <div className={clsx(classes.techStack)}>
+            {project.techStack.map((project) => (
+              <Tooltip text={project.alt} key={project.link}>
+                <figure>
+                  <Image
+                    style={{ borderRadius: '50%' }}
+                    src={project.link}
+                    alt={project.alt}
+                    loading="lazy"
+                    height={30}
+                    width={30}
+                  />
+                </figure>
+              </Tooltip>
+            ))}
+          </div>
         </div>
-        <h2 className={classes.title}>{project.title}</h2>
-        <p className={classes.description}>{project.description}</p>
+        <div className={classes.content}>
+          <h2 className={classes.title}>{project.title}</h2>
+          <p className={classes.description}>{project.description}</p>
+        </div>
         <ul className={classes.cta}>
-          <Link
-            target="_blank"
-            icon={<BsGithub size={20} />}
-            text="Github"
-            href={project.links.github}
-          />
+          {project.links.github && (
+            <Link
+              target="_blank"
+              icon={<BsGithub size={20} />}
+              text="Github"
+              href={project.links.github}
+            />
+          )}
           {project.links.preview && (
             <Link
               target="_blank"

@@ -7,8 +7,10 @@ export type Project = {
   description: string;
   color: 'bluePink' | 'greenBlue' | 'orangeGreen' | 'yellowPurple' | undefined;
   links: {
-    github: string;
+    github?: string;
     preview?: string;
+    linkedIn?: string;
+    testimonial?: string;
   };
   coverImage: string;
   techStack: {

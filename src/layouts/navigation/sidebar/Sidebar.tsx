@@ -3,6 +3,12 @@ import Logo from '@/components/ui/logo';
 import classes from '@/scss/layouts/sidebar/sidebar.module.scss';
 import { AnimatePresence, motion, Variants } from 'framer-motion';
 import React from 'react';
+import {
+  HiOutlineHome,
+  HiOutlineInformationCircle,
+  HiOutlineMail,
+  HiOutlineViewGrid,
+} from 'react-icons/hi';
 
 interface SidebarProps {
   isOpen: boolean;
@@ -44,8 +50,30 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setIsOpen }) => {
             <div className={classes.logo}>
               <Logo />
             </div>
-            <Link href="/" text="Home" onClick={() => setIsOpen(false)} />
-            <Link href="/work" text="Work" onClick={() => setIsOpen(false)} />
+            <Link
+              textIcon={<HiOutlineHome size={24} />}
+              href="/"
+              text="Home"
+              onClick={() => setIsOpen(false)}
+            />
+            <Link
+              textIcon={<HiOutlineViewGrid size={24} />}
+              href="/work"
+              text="Work"
+              onClick={() => setIsOpen(false)}
+            />
+            <Link
+              textIcon={<HiOutlineInformationCircle size={24} />}
+              href="/about"
+              text="About Me"
+              onClick={() => setIsOpen(false)}
+            />
+            <Link
+              textIcon={<HiOutlineMail size={24} />}
+              href="/contact"
+              text="Contact"
+              onClick={() => setIsOpen(false)}
+            />
           </motion.aside>
         )}
       </AnimatePresence>
