@@ -17,12 +17,16 @@ const Navbar: React.FC<NavbarProps> = ({ isOpen, setIsOpen }) => {
 
         <ul className={classes.nav}>
           <Link text="Home" href={'/'} />
-          <Link text="Work" href={'/work'} />
           <Link text="About Me" href={'/about'} />
+          <Link text="Work" href={'/work'} />
           <Link text="Contact" href={'/contact'} />
         </ul>
 
-        <button onClick={() => setIsOpen(!isOpen)} className={classes.toggler}>
+        <button
+          aria-label="Menu Toggle"
+          onClick={() => setIsOpen(!isOpen)}
+          className={classes.toggler}
+        >
           <HiMenu size={20} />
         </button>
       </nav>

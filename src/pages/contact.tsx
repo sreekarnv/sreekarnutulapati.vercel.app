@@ -11,6 +11,7 @@ import useWeb3Forms from '@web3forms/react';
 import { yupResolver } from '@hookform/resolvers/yup';
 import * as Yup from 'yup';
 import { ToastContainer, toast } from 'react-toastify';
+import Seo from '@/components/seo';
 
 const contact: Variants = {
   hidden: { opacity: 0 },
@@ -63,6 +64,7 @@ const ContactPage: NextPage = ({}) => {
 
   return (
     <>
+      <Seo title="Contact" />
       <ToastContainer
         position="top-center"
         autoClose={4000}

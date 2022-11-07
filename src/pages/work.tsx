@@ -14,7 +14,6 @@ import type { GetStaticProps, NextPage } from 'next';
 import path from 'path';
 import { getPlaiceholder } from 'plaiceholder';
 import React from 'react';
-import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
 import slugify from 'slugify';
 
 interface WorkPageProps {
@@ -67,18 +66,18 @@ const WorkPage: NextPage<WorkPageProps> = ({ projects, work }) => {
         >
           <h1 className={classes.heading}>Work Experience</h1>
 
-          <motion.section
-            className={classes.list}
+          <motion.ul
+            className={classes.workList}
             initial="hidden"
             animate="show"
             variants={projectsListVariant}
           >
             {work.map((project) => (
-              <motion.div key={project.id} layout variants={projectItemVariant}>
+              <motion.li key={project.id} layout variants={projectItemVariant}>
                 <WorkCard work={project} key={project.id} />
-              </motion.div>
+              </motion.li>
             ))}
-          </motion.section>
+          </motion.ul>
         </motion.div>
 
         <motion.div
@@ -116,22 +115,13 @@ const WorkPage: NextPage<WorkPageProps> = ({ projects, work }) => {
           initial="hidden"
           animate="show"
           variants={projectsListVariant}
+          className={classes.projectsList}
         >
-          <ResponsiveMasonry
-            columnsCountBreakPoints={{ 450: 1, 750: 2, 1200: 3, 1500: 4 }}
-          >
-            <Masonry gutter="2rem">
-              {activeProjects.map((project) => (
-                <motion.div
-                  key={project.id}
-                  layout
-                  variants={projectItemVariant}
-                >
-                  <ProjectCard project={project} key={project.id} />
-                </motion.div>
-              ))}
-            </Masonry>
-          </ResponsiveMasonry>
+          {activeProjects.map((project) => (
+            <motion.div key={project.id} layout variants={projectItemVariant}>
+              <ProjectCard project={project} key={project.id} />
+            </motion.div>
+          ))}
         </motion.section>
       </div>
     </>
