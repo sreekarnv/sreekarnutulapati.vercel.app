@@ -46,7 +46,7 @@ const HomePage: NextPage = () => {
                 </Button>
               </Link>
 
-              <Link href="/projects" passHref>
+              <Link href="/work" passHref>
                 <Button size="large" variant="secondary">
                   My Work
                 </Button>
