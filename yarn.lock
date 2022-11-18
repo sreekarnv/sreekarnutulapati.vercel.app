@@ -4062,7 +4062,6 @@ __metadata:
     react-dom: 18.2.0
     react-hook-form: ^7.39.1
     react-icons: ^4.4.0
-    react-responsive-masonry: ^2.1.6
     react-toastify: ^9.1.1
     sass: ^1.55.0
     sharp: ^0.31.1
@@ -4299,13 +4298,6 @@ __metadata:
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
   checksum: f7a19ac3496de32ca9ae12aa030f00f14a3d45374f1ceca0af707c831b2a6098ef0d6bdae51bd437b0a306d7f01d4677fcc8de7c0d331eb47ad0f46130e53c5f
-  languageName: node
-  linkType: hard
-
-"react-responsive-masonry@npm:^2.1.6":
-  version: 2.1.6
-  resolution: "react-responsive-masonry@npm:2.1.6"
-  checksum: f4a523fcb3a32388f3824b2dc1e468eefa64463bcb98ab109b803b28e6652e2322d9f120fc8bf94aa7761be8060f0bc89866a097a5ffbf5bf87ec9b1b1e0ddf6
   languageName: node
   linkType: hard
 
