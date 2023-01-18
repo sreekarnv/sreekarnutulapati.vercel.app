@@ -14,5 +14,6 @@ techStack:
   [
     { link: '/logos/react.png', alt: 'ReactJS' },
     { link: '/logos/typescript.png', alt: 'Typescript' },
+    { link: '/logos/mui.png', alt: 'Material UI' },
   ]
 ---

@@ -14,6 +14,8 @@ techStack:
   [
     { link: '/logos/express.png', alt: 'ExpressJS' },
     { link: '/logos/gatsbyjs.svg', alt: 'GatsbyJS' },
+    { link: '/logos/mongodb.png', alt: 'MongoDB' },
     { link: '/logos/typescript.png', alt: 'Typescript' },
+    { link: '/logos/chakra-ui.png', alt: 'Chakra UI' },
   ]
 ---

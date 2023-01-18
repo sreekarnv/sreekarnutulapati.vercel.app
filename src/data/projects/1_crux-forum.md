@@ -13,8 +13,10 @@ domains: ['full-stack']
 techStack:
   [
     { link: '/logos/express.png', alt: 'ExpressJS' },
-    { link: '/logos/graphql.png', alt: 'GraphQL' },
     { link: '/logos/nextjs.png', alt: 'NextJS' },
+    { link: '/logos/mongodb.png', alt: 'MongoDB' },
+    { link: '/logos/graphql.png', alt: 'GraphQL' },
     { link: '/logos/typescript.png', alt: 'Typescript' },
+    { link: '/logos/tailwind.png', alt: 'Tailwind CSS' },
   ]
 ---

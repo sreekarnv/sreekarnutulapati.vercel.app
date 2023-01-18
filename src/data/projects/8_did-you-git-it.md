@@ -14,5 +14,6 @@ techStack:
   [
     { link: '/logos/nextjs.png', alt: 'NextJS' },
     { link: '/logos/typescript.png', alt: 'Typescript' },
+    { link: '/logos/tailwind.png', alt: 'Tailwind CSS' },
   ]
 ---

@@ -12,8 +12,9 @@ color: 'orangeGreen'
 domains: ['full-stack']
 techStack:
   [
-    { link: '/logos/express.png', alt: 'ExpressJS' },
-    { link: '/logos/react.png', alt: 'ReactJS' },
+    { link: '/logos/nextjs.png', alt: 'NextJS' },
+    { link: '/logos/mongodb.png', alt: 'MongoDB' },
+    { link: '/logos/trpc.svg', alt: 'tRPC' },
     { link: '/logos/typescript.png', alt: 'Typescript' },
   ]
 ---

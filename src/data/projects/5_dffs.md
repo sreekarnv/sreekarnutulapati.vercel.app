@@ -9,8 +9,8 @@ domains: ['blockchain', 'frontend']
 techStack:
   [
     { link: '/logos/react.png', alt: 'ReactJS' },
-    { link: '/logos/typescript.png', alt: 'Typescript' },
     { link: '/logos/truffle.jpg', alt: 'Truffle' },
     { link: '/logos/solidity.png', alt: 'Solidity' },
+    { link: '/logos/typescript.png', alt: 'Typescript' },
   ]
 ---
