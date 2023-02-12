@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import classes from '@/scss/components/work-card/work-card.module.scss';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import { BsLinkedin } from 'react-icons/bs';
 import { Project } from '@/types/project';
 import { HiOutlineChatAlt } from 'react-icons/hi';
@@ -67,6 +67,7 @@ const WorkCard: React.FC<WorkCardProps> = ({ work }) => {
             loading="lazy"
             height={work.image.img.height}
             width={work.image.img.width}
+            priority
           />
         </figure>
       </div>

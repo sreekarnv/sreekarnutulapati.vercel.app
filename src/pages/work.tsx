@@ -2,7 +2,7 @@ import ProjectCard from '@/components/project-card';
 import Seo from '@/components/seo';
 import Tab from '@/components/ui/tabs/Tab';
 import Tabs from '@/components/ui/tabs/Tabs';
-import WorkCard from '@/components/work-card/WorkCard';
+import WorkCard from '@/components/work-card';
 import useTab from '@/hooks/useTab';
 import classes from '@/scss/pages/work/work.module.scss';
 import { Project } from '@/types/project';
