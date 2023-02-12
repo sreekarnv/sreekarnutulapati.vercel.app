@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import classes from '@/scss/components/project-card/project-card.module.scss';
-import Image from 'next/image';
+import Image from 'next/legacy/image';
 import { BsGithub, BsPlay } from 'react-icons/bs';
 import { Project } from '@/types/project';
 import { Tooltip } from '@/components/ui/tooltip';

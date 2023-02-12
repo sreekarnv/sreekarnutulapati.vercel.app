@@ -7,12 +7,12 @@ import Link from 'next/link';
 
 const homeContent: Variants = {
   hidden: { opacity: 0 },
-  show: { opacity: 1, transition: { duration: 0.5, staggerChildren: 0.4 } },
+  show: { opacity: 1, transition: { duration: 0.4, staggerChildren: 0.3 } },
 };
 
 const homeContentChild: Variants = {
   hidden: { opacity: 0, y: 10 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.5 } },
+  show: { opacity: 1, y: 0, transition: { duration: 0.4 } },
 };
 
 const HomePage: NextPage = () => {

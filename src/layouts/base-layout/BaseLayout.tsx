@@ -1,15 +1,20 @@
 import React from 'react';
 import Navigation from '@/layouts/navigation';
+import { Inter } from '@next/font/google';
 
-interface BaseLayoutProps {
-  children: React.ReactNode;
-}
+const inter = Inter({
+  weight: ['400', '500', '600', '700'],
+  display: 'swap',
+  subsets: ['latin'],
+});
 
-const BaseLayout: React.FC<BaseLayoutProps> = ({ children }) => {
+const BaseLayout: React.FC<React.PropsWithChildren> = ({ children }) => {
   return (
     <>
-      <Navigation />
-      <main>{children}</main>
+      <div className={inter.className}>
+        <Navigation />
+        <main>{children}</main>
+      </div>
     </>
   );
 };
