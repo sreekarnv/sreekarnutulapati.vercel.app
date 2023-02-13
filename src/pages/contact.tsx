@@ -102,6 +102,10 @@ const ContactPage: NextPage = ({}) => {
             >
               LinkedIn
             </Link>
+            ,&nbsp;
+            <Link href="https://github.com/sreekarnv" target="_blank">
+              Github
+            </Link>
           </p>
         </motion.div>
         <motion.form
