@@ -26,7 +26,7 @@ You need to have node and yarn installed on your computer.
 | :---------------------------------------------------------------------------------------------------------: | :------------------------------------------------------------------------------------------------------------------: |
 |                                            ![](assets/home.png)                                             |                                                ![](assets/about.png)                                                 |
 
-| [Work](https://pagespeed.web.dev/report?url=https%3A%2F%2Fsreekarnutulapati.vercel.app%2Fwork&form_factor=desktop) | [Contact](https://pagespeed.web.dev/report?url=https%3A%2F%2Fsreekarnutulapati.vercel.app%2Fabout&form_factor=desktop) |
-| :----------------------------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------------------------------------------------: |
-|                                                ![](assets/work.png)                                                |                                                ![](assets/contact.png)                                                 |
+| [Work](https://pagespeed.web.dev/report?url=https%3A%2F%2Fsreekarnutulapati.vercel.app%2Fwork&form_factor=desktop) | [Contact](https://pagespeed.web.dev/report?url=https%3A%2F%2Fsreekarnutulapati.vercel.app%2Fcontact&form_factor=desktop) |
+| :----------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------: |
+|                                                ![](assets/work.png)                                                |                                                 ![](assets/contact.png)                                                  |
 |                                                                                                                    |
