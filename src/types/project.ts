@@ -12,7 +12,9 @@ export type Project = {
     linkedIn?: string;
     testimonial?: string;
   };
+  role?: string[];
   coverImage: string;
+  coverImagePriority?: boolean;
   techStack: {
     link: string;
     alt: string;

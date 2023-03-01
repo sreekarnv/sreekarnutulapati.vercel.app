@@ -50,7 +50,7 @@ const WorkCard: React.FC<WorkCardProps> = ({ work }) => {
             )}
             {work.links.testimonial && (
               <Link
-                target="_parent"
+                target="_blank"
                 text="Testimonial"
                 icon={<HiOutlineChatAlt size={20} />}
                 href={work.links.testimonial}
@@ -64,10 +64,10 @@ const WorkCard: React.FC<WorkCardProps> = ({ work }) => {
             placeholder="blur"
             src={work.image.img.src}
             alt={work.title}
-            loading="lazy"
+            loading={work.coverImagePriority ? 'eager' : 'lazy'}
             height={work.image.img.height}
             width={work.image.img.width}
-            priority
+            priority={work.coverImagePriority}
           />
         </figure>
       </div>

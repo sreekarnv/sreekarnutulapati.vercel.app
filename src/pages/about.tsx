@@ -42,8 +42,7 @@ const AboutPage: NextPage = ({}) => {
           required to build effective and efficient websites.
         </motion.p>
         <motion.p variants={aboutChild}>
-          As of today, I&apos;m currently working as a frontend developer intern
-          at CleverTap.
+          Recently, I worked at CleverTap as a frontend developer intern.
         </motion.p>
         <motion.div variants={aboutChild} className={classes.cta}>
           <Link href="/work" passHref>

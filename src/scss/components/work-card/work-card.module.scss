@@ -61,6 +61,8 @@
 .media {
   box-shadow: 0 0 10px 0 rgba(variables.$color-black, 0.2);
   border-radius: 10px;
+  align-self: start;
+  justify-self: start;
 
   @include mixins.respond(tab-land) {
     order: -1;
