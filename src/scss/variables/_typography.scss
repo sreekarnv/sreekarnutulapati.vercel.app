@@ -2,7 +2,7 @@
 $ff-default: inherit;
 
 $font-families: (
-  'default': $ff-default,
+	'default': $ff-default,
 );
 
 // Font sizes
@@ -17,10 +17,10 @@ $fw-bold: 700;
 $fw-extra-bold: 800;
 
 $font-weights: (
-  'light': $fw-light,
-  'normal': $fw-normal,
-  'medium': $fw-medium,
-  'semi-bold': $fw-semi-bold,
-  'bold': $fw-bold,
-  'extra-bold': $fw-extra-bold,
+	'light': $fw-light,
+	'normal': $fw-normal,
+	'medium': $fw-medium,
+	'semi-bold': $fw-semi-bold,
+	'bold': $fw-bold,
+	'extra-bold': $fw-extra-bold,
 );
