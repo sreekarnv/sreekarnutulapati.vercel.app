@@ -14,8 +14,10 @@ interface LinkProps {
 const Link: Component<LinkProps> = (props) => {
 	return (
 		<>
-			<li class={['link', props.isActive ? 'link__active' : ''].join(' ')}>
-				<a href={props.href}>
+			<li>
+				<a
+					class={['link', props.isActive ? 'link__active' : ''].join(' ')}
+					href={props.href}>
 					<span class='link__content'>
 						<span>{props.textIcon}</span>
 						<span class='link__text'>{props.text}</span>
