@@ -5,6 +5,11 @@
 	cursor: pointer;
 	transition: all 0.3s ease-out;
 	text-transform: capitalize;
+
+	&:disabled {
+		opacity: 0.6;
+		pointer-events: none;
+	}
 }
 
 @mixin solid-button($color-bg, $color-text) {
