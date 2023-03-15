@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { Component, JSX, splitProps } from 'solid-js';
 
-import '../scss/components/button.scss';
+import '../../scss/components/shared/button.scss';
 
 const variants = {
 	primary: 'btn__primary',

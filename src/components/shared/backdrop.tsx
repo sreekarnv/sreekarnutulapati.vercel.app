@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { Component, JSX, Show, splitProps } from 'solid-js';
 
-import '../scss/components/backdrop.scss';
+import '../../scss/components/shared/backdrop.scss';
 
 interface BackdropProps extends JSX.HTMLAttributes<HTMLDivElement> {
 	show?: boolean;

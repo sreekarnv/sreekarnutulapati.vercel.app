@@ -1,6 +1,6 @@
 import type { Component } from 'solid-js';
 
-import '../scss/components/logo.scss';
+import '../../scss/components/shared/logo.scss';
 
 interface LogoProps {}
 
