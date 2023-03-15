@@ -1,4 +1,5 @@
 ---
+import Button from '../components/button';
 import DefaultLayout from '../layouts/default/default.layout.astro';
 ---
 
@@ -25,8 +26,14 @@ import DefaultLayout from '../layouts/default/default.layout.astro';
 		</div>
 
 		<div class='about__action'>
-			<a href='/work'> My Work</a>
-			<a href='/contact'> Contact Me</a>
+			<a href='/work'>
+				<Button class='about__action-btn' variant='secondary-outline'>
+					My Work
+				</Button>
+			</a>
+			<a href='/contact'>
+				<Button class='about__action-btn'>Contact Me</Button>
+			</a>
 		</div>
 	</section>
 </DefaultLayout>
@@ -71,6 +78,10 @@ import DefaultLayout from '../layouts/default/default.layout.astro';
 		@include mixins.respond(tab-land) {
 			font-size: 2rem;
 		}
+
+		&:last-child {
+			margin-bottom: 4rem;
+		}
 	}
 
 	.about__action {
@@ -86,6 +97,14 @@ import DefaultLayout from '../layouts/default/default.layout.astro';
 			& > * {
 				width: 100%;
 			}
+		}
+	}
+
+	.about__action-btn {
+		width: 15rem;
+
+		@include mixins.respond(tab-land) {
+			width: 100%;
 		}
 	}
 </style>

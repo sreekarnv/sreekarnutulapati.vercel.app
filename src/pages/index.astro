@@ -1,4 +1,5 @@
 ---
+import Button from '../components/button';
 import DefaultLayout from '../layouts/default/default.layout.astro';
 ---
 
@@ -15,12 +16,20 @@ import DefaultLayout from '../layouts/default/default.layout.astro';
 			</p>
 
 			<nav class='home__action'>
-				<a href='/about'>
-					<button>About Me</button>
+				<a href='/about' class='home__action__link'>
+					<Button
+						size='large'
+						variant='primary-outline'
+						class='home__action__btn'
+					>
+						About Me
+					</Button>
 				</a>
 
-				<a href='/work'>
-					<button>My Work</button>
+				<a href='/work' class='home__action__link'>
+					<Button size='large' variant='secondary' class='home__action__btn'>
+						My Work
+					</Button>
 				</a>
 			</nav>
 		</div>
@@ -118,10 +127,14 @@ import DefaultLayout from '../layouts/default/default.layout.astro';
 
 		@include mixins.respond(phone-lg) {
 			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
 
-			& > * {
-				width: 100%;
-			}
+	.home__action__link,
+	.home__action__btn {
+		@include mixins.respond(phone-lg) {
+			width: 100%;
 		}
 	}
 </style>
