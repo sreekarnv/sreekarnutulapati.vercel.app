@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { Component, JSX, splitProps } from 'solid-js';
+import { Component, JSX, Show, splitProps } from 'solid-js';
 
 import '../../scss/components/shared/button.scss';
 
@@ -28,6 +28,7 @@ const Button: Component<ButtonProps> = (props) => {
 		'isLoading',
 		'class',
 		'children',
+		'disabled',
 	]);
 	return (
 		<>
@@ -37,8 +38,11 @@ const Button: Component<ButtonProps> = (props) => {
 					variants[l.variant || 'primary'],
 					l.class,
 				])}
+				disabled={l.disabled || l.isLoading}
 				{...rest}>
-				{l.children}
+				<Show when={l.isLoading} fallback={l.children}>
+					Loading...
+				</Show>
 			</button>
 		</>
 	);

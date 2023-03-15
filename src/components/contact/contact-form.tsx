@@ -37,16 +37,55 @@ const ContactForm: Component<ContactFormProps> = ({}) => {
 	const [name, setName] = createSignal('');
 	const [email, setEmail] = createSignal('');
 	const [message, setMessage] = createSignal('');
+	const [isLoading, setIsLoading] = createSignal(false);
 	const [fieldErrors, setFieldErrors] = createSignal<ContactFormFieldErrors>();
 
-	const notify = () =>
-		toast.success('Submitted Successfully', {
-			position: 'top-center',
-			className: 'contact-form__toast',
-			duration: 3000,
-		});
+	const notify = (type: 'success' | 'error', message?: string) => {
+		if (type === 'success') {
+			toast.success(message, {
+				position: 'top-center',
+				className: 'contact-form__toast',
+				duration: 3000,
+			});
+		} else {
+			toast.error('Could not send the message. Try later', {
+				position: 'top-center',
+				className: 'contact-form__toast',
+				duration: 3000,
+			});
+		}
+	};
 
-	const submitForm = (
+	const submitToWeb3Forms = async () => {
+		try {
+			const res = await fetch('https://api.web3forms.com/submit', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json',
+					Accept: 'application/json',
+				},
+				body: JSON.stringify({
+					name: name(),
+					email: email(),
+					message: message(),
+					access_key: import.meta.env.PUBLIC_WEB3FORMS_ACCESS_KEY,
+					subject: 'Message from your portfolio website',
+				}),
+			});
+
+			const json = await res.json();
+			console.log(json);
+
+			if (json.message) {
+				notify('success', json.message);
+			}
+		} catch (err) {
+			console.log(err);
+			notify('error');
+		}
+	};
+
+	const submitForm = async (
 		e: Event & {
 			submitter: HTMLElement;
 		} & {
@@ -55,6 +94,8 @@ const ContactForm: Component<ContactFormProps> = ({}) => {
 		}
 	) => {
 		e.preventDefault();
+
+		setIsLoading(true);
 		setFieldErrors({});
 
 		const formData = {
@@ -69,11 +110,13 @@ const ContactForm: Component<ContactFormProps> = ({}) => {
 
 		if (result.success) {
 			console.log('Form data is valid');
-			notify();
+			await submitToWeb3Forms();
 		} else {
 			const errors = result.error.formErrors.fieldErrors;
 			setFieldErrors(errors);
 		}
+
+		setIsLoading(false);
 
 		setEmail('');
 		setName('');
@@ -127,7 +170,9 @@ const ContactForm: Component<ContactFormProps> = ({}) => {
 							setMessage(e.currentTarget.value);
 						}}></FormTextArea>
 				</FormGroup>
-				<Button type='submit'>Submit</Button>
+				<Button isLoading={isLoading()} type='submit'>
+					Submit
+				</Button>
 			</form>
 
 			<Toaster />
