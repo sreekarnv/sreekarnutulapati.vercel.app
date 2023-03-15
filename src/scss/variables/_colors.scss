@@ -9,19 +9,19 @@ $color-gray-light: #667085;
 $color-gray-dark: #3f4551;
 
 $colors-theme: (
-	'primary': $color-primary,
-	'secondary': $color-secondary,
-	'danger': $color-danger,
+  'primary': $color-primary,
+  'secondary': $color-secondary,
+  'danger': $color-danger,
 );
 
 $colors-neutral: (
-	'white': $color-white,
-	'black': $color-black,
-	'gray-light': $color-gray-light,
-	'gray-dark': $color-gray-dark,
+  'white': $color-white,
+  'black': $color-black,
+  'gray-light': $color-gray-light,
+  'gray-dark': $color-gray-dark,
 );
 
 $colors: map-merge(
-	$map1: $colors-theme,
-	$map2: $colors-neutral,
+  $map1: $colors-theme,
+  $map2: $colors-neutral,
 );

@@ -2,12 +2,12 @@
 @use '../../mixins/main.scss' as mixins;
 
 .form-label {
-	display: block;
-	margin-bottom: 1rem;
-	font-size: 1.5rem;
-	font-weight: variables.$fw-semi-bold;
+  display: block;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: variables.$fw-semi-bold;
 }
 
 .form-label__required {
-	color: variables.$color-primary;
+  color: variables.$color-primary;
 }
