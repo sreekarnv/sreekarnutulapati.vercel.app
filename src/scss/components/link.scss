@@ -33,12 +33,6 @@
 	font-weight: variables.$fw-bold;
 }
 
-.link__icon {
-	height: 1.5rem;
-	width: 1.5rem;
-	font-size: 1.5rem;
-}
-
 .link__active {
 	border-top: 2px solid variables.$color-primary;
 	color: variables.$color-primary;
