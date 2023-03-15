@@ -4,7 +4,7 @@ import '@/scss/components/shared/logo.scss';
 
 interface LogoProps {}
 
-const Logo: Component<LogoProps> = ({}) => {
+const Logo: Component<LogoProps> = () => {
   return (
     <>
       <a class="logo" href="/">
