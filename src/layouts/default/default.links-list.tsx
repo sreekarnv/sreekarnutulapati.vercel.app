@@ -1,5 +1,5 @@
 import { Component, For } from 'solid-js';
-import Link from '../../components/link';
+import Link from '../../components/shared/link';
 
 import ArrowUpRightIcon from '../../icons/arrow-up-right';
 import HomeOutline from '../../icons/home-outline';

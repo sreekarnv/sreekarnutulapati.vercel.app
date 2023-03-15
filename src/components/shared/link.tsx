@@ -1,5 +1,5 @@
 import type { Component, JSX } from 'solid-js';
-import '../scss/components/link.scss';
+import '../../scss/components/shared/link.scss';
 
 interface LinkProps {
 	href: string;

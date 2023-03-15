@@ -1,0 +1,13 @@
+@use '../../mixins/main.scss' as mixins;
+
+.contact-form {
+	flex-basis: 40%;
+
+	@include mixins.respond(laptop-md) {
+		flex-basis: 50%;
+	}
+
+	@include mixins.respond(phone-lg) {
+		padding-bottom: 1.5rem;
+	}
+}

@@ -1,8 +1,8 @@
 import clsx from 'clsx';
 import type { Component } from 'solid-js';
 import { createSignal } from 'solid-js';
-import Backdrop from '../../components/backdrop';
-import Logo from '../../components/logo';
+import Backdrop from '../../components/shared/backdrop';
+import Logo from '../../components/shared/logo';
 import Menu from '../../icons/menu';
 import DefaultLinksList from './default.links-list';
 
