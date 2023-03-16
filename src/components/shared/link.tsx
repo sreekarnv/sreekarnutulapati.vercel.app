@@ -4,8 +4,8 @@ import '@/scss/components/shared/link.scss';
 interface LinkProps {
   href: string;
   text: string;
-  icon?: JSX.Element;
-  textIcon?: JSX.Element;
+  icon?: JSX.Element | Element;
+  textIcon?: JSX.Element | Element;
   onClick?: () => void;
   target?: string;
   isActive?: boolean;
@@ -18,6 +18,7 @@ const Link: Component<LinkProps> = (props) => {
         <a
           class={['link', props.isActive ? 'link__active' : ''].join(' ')}
           href={props.href}
+          target={props.target}
         >
           <span class="link__content">
             <span>{props.textIcon}</span>
