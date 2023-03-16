@@ -166,7 +166,7 @@ const ContactForm: Component<ContactFormProps> = () => {
             onInput={(e) => {
               setMessage(e.currentTarget.value);
             }}
-          ></FormTextArea>
+          />
         </FormGroup>
         <Button isLoading={isLoading()} type="submit">
           Submit
