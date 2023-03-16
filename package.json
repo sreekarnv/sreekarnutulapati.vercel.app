@@ -19,6 +19,7 @@
     "@astrojs/vercel": "^3.2.1",
     "@fontsource/inter": "^4.5.15",
     "@formkit/auto-animate": "^1.0.0-beta.6",
+    "@hotwired/turbo": "^7.3.0",
     "astro": "^2.1.0",
     "clsx": "^1.2.1",
     "isotope-layout": "^3.0.6",
