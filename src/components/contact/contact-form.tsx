@@ -33,7 +33,7 @@ interface ContactFormFieldErrors {
   message?: string[] | undefined;
 }
 
-const ContactForm: Component<ContactFormProps> = ({}) => {
+const ContactForm: Component<ContactFormProps> = () => {
   const [name, setName] = createSignal('');
   const [email, setEmail] = createSignal('');
   const [message, setMessage] = createSignal('');
@@ -74,7 +74,6 @@ const ContactForm: Component<ContactFormProps> = ({}) => {
       });
 
       const json = await res.json();
-      console.log(json);
 
       if (json.message) {
         notify('success', json.message);
