@@ -26,6 +26,7 @@
     "zod": "^3.21.4"
   },
   "devDependencies": {
+    "@astrojs/sitemap": "^1.2.1",
     "@astrojs/solid-js": "^2.1.0",
     "@astrojs/vercel": "^3.2.1",
     "@types/isotope-layout": "^3.0.9",
