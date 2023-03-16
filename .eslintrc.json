@@ -13,6 +13,10 @@
       "parserOptions": {
         "parser": "@typescript-eslint/parser",
         "extraFileExtensions": [".astro"]
+      },
+      "rules": {
+        "solid/prefer-for": "off",
+        "solid/self-closing-comp": "off"
       }
     }
   ]
