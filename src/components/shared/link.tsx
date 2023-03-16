@@ -17,8 +17,7 @@ const Link: Component<LinkProps> = (props) => {
       <li>
         <a
           class={['link', props.isActive ? 'link__active' : ''].join(' ')}
-          href={props.href}
-          target={props.target}
+          {...props}
         >
           <span class="link__content">
             <span>{props.textIcon}</span>

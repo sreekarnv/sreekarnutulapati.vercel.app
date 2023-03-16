@@ -28,6 +28,7 @@
   padding: 2rem;
   list-style: none;
   display: none;
+  transition: all 0.3s ease-out;
 
   &--hide {
     transform: translateX(-100%);
