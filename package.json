@@ -10,7 +10,8 @@
     "astro": "astro",
     "prettier:check": "prettier --check ./",
     "prettier:write": "prettier --write ./",
-    "lint": "eslint ./"
+    "lint": "eslint ./",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@astrojs/image": "^0.16.1",
@@ -33,9 +34,11 @@
     "eslint-plugin-astro": "^0.24.0",
     "eslint-plugin-jsx-a11y": "^6.7.1",
     "eslint-plugin-solid": "^0.11.0",
+    "husky": "^8.0.0",
     "prettier": "^2.8.4",
     "prettier-plugin-astro": "^0.8.0",
     "sass": "^1.59.2",
     "sharp": "^0.31.3"
-  }
+  },
+  "packageManager": "yarn@3.4.1"
 }

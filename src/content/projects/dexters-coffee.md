@@ -11,5 +11,4 @@ techStack:
     { link: '/logos/typescript.png', alt: 'Typescript' },
     { link: '/logos/python.jpg', alt: 'Python' },
   ]
-
 ---
