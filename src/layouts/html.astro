@@ -18,6 +18,8 @@ const pathname = Astro.url.pathname;
   <head>
     <meta charset="utf-8" />
 
+    <meta name="turbo-cache-control" content="no-cache" />
+
     <title>{siteTitle}</title>
 
     <meta name="description" content={description} />
@@ -58,7 +60,5 @@ const pathname = Astro.url.pathname;
   </head>
   <body>
     <slot />
-
-    <script src="/src/app/app.ts"></script>
   </body>
 </html>

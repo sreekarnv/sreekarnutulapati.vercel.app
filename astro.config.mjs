@@ -4,6 +4,8 @@ import vercel from '@astrojs/vercel/serverless';
 import image from '@astrojs/image';
 import sitemap from '@astrojs/sitemap';
 
+// import node from '@astrojs/node';
+
 // https://astro.build/config
 export default defineConfig({
   site: 'https://sreekarnutulapati.vercel.app',
@@ -23,5 +25,8 @@ export default defineConfig({
     }),
   ],
   output: 'server',
-  adapter: vercel({}),
+  // adapter: node({
+  //   mode: "standalone"
+  // })
+  adapter: vercel(),
 });

@@ -3,8 +3,6 @@ import { Image } from '@astrojs/image/components';
 import type { Project } from '@/content/config';
 import { getPlaiceholder } from 'plaiceholder';
 import Link from '@/components/shared/link';
-import GithubIcon from '@/icons/github';
-import PlayOutlineIcon from '@/icons/play-outline';
 
 export interface Props {
   project: Project;
@@ -52,12 +50,12 @@ const domains = project.domains
       </ul>
     </div>
     <div class="project-card__content">
-      <h4 class="project-card__title">{project.title}</h4>
+      <h2 class="project-card__title">{project.title}</h2>
       <p class="project-card__description">{project.description}</p>
     </div>
     <ul class="project-card__action">
       <Link
-        icon={GithubIcon as unknown as Element}
+        icon="github"
         target="_blank"
         href={project.links.github}
         text="Github"
@@ -65,7 +63,7 @@ const domains = project.domains
       {
         project.links.preview && (
           <Link
-            icon={PlayOutlineIcon as unknown as Element}
+            icon="play"
             target="_blank"
             href={project.links.preview}
             text="Preview"

@@ -13,7 +13,7 @@ links:
     linkedIn: https://www.linkedin.com/company/folioset,
     testimonial: '/testimonials/folioset.pdf',
   }
-coverImage: 'https://res.cloudinary.com/dfesryh4w/image/upload/v1667755998/portfolio/folioset_uadnik.png'
+coverImage: 'https://res.cloudinary.com/dfesryh4w/image/upload/v1679063608/portfolio/work/folioset_uadnik.e009a282_vputlo.webp'
 domains: ['frontend']
 techStack:
   [
