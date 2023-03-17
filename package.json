@@ -15,8 +15,8 @@
   },
   "dependencies": {
     "@astrojs/image": "^0.16.1",
+    "@astrojs/node": "^5.1.0",
     "@fontsource/inter": "^4.5.15",
-    "@hotwired/turbo": "^7.3.0",
     "astro": "^2.1.0",
     "clsx": "^1.2.1",
     "isotope-layout": "^3.0.6",

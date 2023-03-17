@@ -7,7 +7,7 @@ links:
     github: 'https://github.com/sreekarnv/burger-house',
     preview: 'https://burger-house-sreekar.netlify.app',
   }
-coverImage: 'https://res.cloudinary.com/dfesryh4w/image/upload/v1666187774/portfolio/burger-house.png'
+coverImage: 'https://res.cloudinary.com/dfesryh4w/image/upload/v1679063487/portfolio/projects/burger-house.2e1c41bd_tpxnlv.webp'
 domains: ['full-stack']
 techStack:
   [

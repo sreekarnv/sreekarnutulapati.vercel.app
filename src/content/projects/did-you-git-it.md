@@ -7,7 +7,7 @@ links:
     github: 'https://github.com/crux-bphc/DidYouGitIt',
     preview: 'https://www.dygit.crux-bphc.com/',
   }
-coverImage: 'https://res.cloudinary.com/dfesryh4w/image/upload/v1666187838/portfolio/did-you-git-it.png'
+coverImage: 'https://res.cloudinary.com/dfesryh4w/image/upload/v1679063502/portfolio/projects/did-you-git-it.6dff35c9_mfkwqv.webp'
 domains: ['frontend']
 techStack:
   [

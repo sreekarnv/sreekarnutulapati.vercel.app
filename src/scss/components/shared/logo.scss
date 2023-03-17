@@ -8,9 +8,15 @@
 }
 
 .logo__image {
+  aspect-ratio: 1 / 1;
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
+
+  @include mixins.respond(phone-lg) {
+    width: 5rem;
+    height: 5rem;
+  }
 }
 
 .logo__content {

@@ -12,7 +12,7 @@ links:
     linkedIn: https://www.linkedin.com/company/clevertap/,
     testimonial: '/testimonials/clevertap.pdf',
   }
-coverImage: 'https://res.cloudinary.com/dfesryh4w/image/upload/v1677712157/portfolio/clevertap_rqlksf.jpg'
+coverImage: 'https://res.cloudinary.com/dfesryh4w/image/upload/v1679063603/portfolio/work/clevertap_rqlksf.b314b510_n8t4zw.webp'
 domains: ['frontend']
 techStack:
   [

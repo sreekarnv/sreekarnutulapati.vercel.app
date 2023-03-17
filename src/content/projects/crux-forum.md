@@ -7,7 +7,7 @@ links:
     github: 'https://github.com/crux-bphc/crux-forum-website',
     preview: 'https://staging.forum.crux-bphc.com/',
   }
-coverImage: 'https://res.cloudinary.com/dfesryh4w/image/upload/v1666187805/portfolio/crux-forum.png'
+coverImage: 'https://res.cloudinary.com/dfesryh4w/image/upload/v1679063500/portfolio/projects/crux-forum.db11665a_qrrgd2.webp'
 domains: ['full-stack']
 techStack:
   [

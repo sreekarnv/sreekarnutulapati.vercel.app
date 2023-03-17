@@ -1,12 +1,6 @@
 import { Component, For } from 'solid-js';
 import Link from '@/components/shared/link';
 
-import ArrowUpRightIcon from '@/icons/arrow-up-right';
-import HomeOutline from '@/icons/home-outline';
-import InfoCircleOutline from '@/icons/info-circle-outline';
-import MailOutline from '@/icons/mail-outline';
-import ViewGridOutline from '@/icons/view-grid-outline';
-
 interface DefaultLinksListProps {
   ulClass?: string;
   pathname?: string;
@@ -17,22 +11,22 @@ const links = [
   {
     text: 'Home',
     href: '/',
-    textIcon: <HomeOutline height={24} width={24} />,
+    textIcon: 'home',
   },
   {
     text: 'About Me',
     href: '/about',
-    textIcon: <InfoCircleOutline height={24} width={24} />,
+    textIcon: 'info-circle',
   },
   {
     text: 'Work',
     href: '/work',
-    textIcon: <ViewGridOutline height={24} width={24} />,
+    textIcon: 'view-grid',
   },
   {
     text: 'Contact',
     href: '/contact',
-    textIcon: <MailOutline height={24} width={24} />,
+    textIcon: 'mail',
   },
 ];
 
@@ -43,10 +37,13 @@ const DefaultLinksList: Component<DefaultLinksListProps> = (props) => {
         <For each={links}>
           {(link) => (
             <Link
-              icon={<ArrowUpRightIcon height={24} width={24} />}
+              icon={'arrow-up-right'}
               isActive={props.pathname === link.href}
-              {...link}
-              textIcon={props.disableTextIcon ? null : link.textIcon}
+              text={link.text}
+              href={link.href}
+              textIcon={
+                props.disableTextIcon ? undefined : (link.textIcon as any)
+              }
             />
           )}
         </For>

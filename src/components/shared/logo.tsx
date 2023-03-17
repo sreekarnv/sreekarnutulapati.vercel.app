@@ -8,13 +8,7 @@ const Logo: Component<LogoProps> = () => {
   return (
     <>
       <a class="logo" href="/">
-        <img
-          class="logo__image"
-          src="/logo.webp"
-          height={60}
-          width={60}
-          alt="Sreekar Nutulapati"
-        />
+        <img class="logo__image" src="/logo.webp" alt="Sreekar Nutulapati" />
         <div class="logo__content">
           <span class="logo__content__name">Sreekar Nutulapati</span>
           <span class="logo__content__designation">Developer</span>

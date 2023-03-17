@@ -8,14 +8,20 @@ const projects = await getCollection('projects');
 const work = await getCollection('work');
 ---
 
-<DefaultLayout>
+<DefaultLayout title="Work">
   <div class="work">
     <section class="work__experience">
       <h1 class="work__heading">Work Experience</h1>
       <ul class="work__experience__list">
         {
           work.map((work) => {
-            return <WorkexCard work={work.data} />;
+            return (
+              <>
+                <li>
+                  <WorkexCard work={work.data} />
+                </li>
+              </>
+            );
           })
         }
       </ul>
@@ -33,7 +39,11 @@ const work = await getCollection('work');
       <ul class="work__projects__list">
         {
           projects.map((project) => {
-            return <ProjectCard project={project.data} />;
+            return (
+              <li>
+                <ProjectCard project={project.data} />
+              </li>
+            );
           })
         }
       </ul>

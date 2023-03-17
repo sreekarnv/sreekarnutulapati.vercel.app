@@ -1,7 +1,5 @@
 ---
 import type { Work } from '@/content/config';
-import ChatOutline from '@/icons/chat-outline';
-import LinkedIn from '@/icons/linkedin';
 import { Image } from '@astrojs/image/components';
 import { getPlaiceholder } from 'plaiceholder';
 import Link from '../shared/link';
@@ -42,7 +40,7 @@ const { img } = await getPlaiceholder(work.coverImage);
         work.links.linkedIn && (
           <Link
             target="_blank"
-            icon={LinkedIn as unknown as HTMLElement}
+            icon="linkedin"
             text="Linked In"
             href={work.links.linkedIn}
           />
@@ -52,8 +50,8 @@ const { img } = await getPlaiceholder(work.coverImage);
         work.links.testimonial && (
           <Link
             target="_blank"
+            icon="chat"
             text="Testimonial"
-            icon={ChatOutline as unknown as HTMLElement}
             href={work.links.testimonial}
           />
         )
