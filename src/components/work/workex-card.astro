@@ -3,6 +3,7 @@ import type { Work } from '@/content/config';
 import { Image } from '@astrojs/image/components';
 import { getPlaiceholder } from 'plaiceholder';
 import Link from '../shared/link';
+import Tooltip from '../shared/tooltip.astro';
 
 export interface Props {
   work: Work;
@@ -19,16 +20,18 @@ const { img } = await getPlaiceholder(work.coverImage);
       <div class="workex-card__stack">
         {
           work.techStack.map((stack) => (
-            <figure>
-              <Image
-                style={{ 'border-radius': '50%' }}
-                src={stack.link}
-                alt={stack.alt}
-                loading="lazy"
-                height={30}
-                width={30}
-              />
-            </figure>
+            <Tooltip text={stack.alt}>
+              <figure>
+                <Image
+                  style={{ 'border-radius': '50%' }}
+                  src={stack.link}
+                  alt={stack.alt}
+                  loading="lazy"
+                  height={30}
+                  width={30}
+                />
+              </figure>
+            </Tooltip>
           ))
         }
       </div>

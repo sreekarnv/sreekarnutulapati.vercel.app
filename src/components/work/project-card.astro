@@ -3,6 +3,7 @@ import { Image } from '@astrojs/image/components';
 import type { Project } from '@/content/config';
 import { getPlaiceholder } from 'plaiceholder';
 import Link from '@/components/shared/link';
+import Tooltip from '../shared/tooltip.astro';
 
 export interface Props {
   project: Project;
@@ -36,13 +37,17 @@ const domains = project.domains
         {
           project.techStack.map((stack) => {
             return (
-              <li class="project-card__stack-item">
-                <Image
-                  src={stack.link}
-                  alt={stack.alt}
-                  height={28}
-                  width={28}
-                />
+              <li>
+                <Tooltip text={stack.alt}>
+                  <div class="project-card__stack-item">
+                    <Image
+                      src={stack.link}
+                      alt={stack.alt}
+                      height={28}
+                      width={28}
+                    />
+                  </div>
+                </Tooltip>
               </li>
             );
           })
