@@ -168,7 +168,7 @@ const ContactForm: Component<ContactFormProps> = () => {
             }}
           />
         </FormGroup>
-        <Button isLoading={isLoading()} type="submit">
+        <Button variant="secondary-outline" isLoading={isLoading()} type="submit">
           Submit
         </Button>
       </form>
