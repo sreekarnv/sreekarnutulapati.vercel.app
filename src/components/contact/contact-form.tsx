@@ -79,7 +79,6 @@ const ContactForm: Component<ContactFormProps> = () => {
         notify('success', json.message);
       }
     } catch (err) {
-      console.log(err);
       notify('error');
     }
   };
@@ -106,7 +105,6 @@ const ContactForm: Component<ContactFormProps> = () => {
     const result = contactFormSchema.safeParse(formData);
 
     if (result.success) {
-      console.log('Form data is valid');
       await submitToWeb3Forms();
     } else {
       const errors = result.error.formErrors.fieldErrors;
@@ -168,7 +166,11 @@ const ContactForm: Component<ContactFormProps> = () => {
             }}
           />
         </FormGroup>
-        <Button variant="secondary-outline" isLoading={isLoading()} type="submit">
+        <Button
+          variant="secondary-outline"
+          isLoading={isLoading()}
+          type="submit"
+        >
           Submit
         </Button>
       </form>

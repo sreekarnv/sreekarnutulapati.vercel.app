@@ -57,6 +57,14 @@ const work = await getCollection('work');
   @use '../scss/variables/main.scss' as variables;
   @use '../scss/mixins/main.scss' as mixins;
 
+  body {
+    .work {
+      @include mixins.respond(phone-lg) {
+        overflow-x: hidden;
+      }
+    }
+  }
+
   .work {
     padding-top: 5rem;
     padding-bottom: 5rem;
