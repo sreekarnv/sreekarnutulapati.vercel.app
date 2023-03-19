@@ -62,7 +62,7 @@ const work = await getCollection('work');
     padding-bottom: 5rem;
 
     @include mixins.respond(phone-lg) {
-      padding: 1rem 2rem;
+      padding: 1rem;
       padding-top: 3rem;
     }
   }
@@ -109,6 +109,11 @@ const work = await getCollection('work');
       padding-left: 2rem;
       padding-right: 2rem;
     }
+
+    @include mixins.respond(phone-lg) {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
 
   .work__projects__list {
@@ -128,9 +133,12 @@ const work = await getCollection('work');
 
     padding: 5rem 10rem;
 
-    @include mixins.respond(tab-land) {
-      padding-left: 2rem;
-      padding-right: 2rem;
+    @include mixins.respond(laptop-sm) {
+      padding: 5rem 2rem;
+    }
+
+    @include mixins.respond(phone-lg) {
+      padding: 2rem 0;
     }
   }
 </style>
