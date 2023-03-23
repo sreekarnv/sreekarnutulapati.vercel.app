@@ -687,6 +687,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@hotwired/turbo@npm:^7.3.0":
+  version: 7.3.0
+  resolution: "@hotwired/turbo@npm:7.3.0"
+  checksum: ccc03c980e4b4636e48ea2132c7d28be1be4f4e6123f63905fbf871e7647369b5c6ce53301443b218d7abf68fa4897eaf614254688108ed6ae303c5040241a97
+  languageName: node
+  linkType: hard
+
 "@humanwhocodes/config-array@npm:^0.11.8":
   version: 0.11.8
   resolution: "@humanwhocodes/config-array@npm:0.11.8"
@@ -3218,6 +3225,13 @@ __metadata:
     section-matter: ^1.0.0
     strip-bom-string: ^1.0.0
   checksum: 37717bd424344487d655392251ce8d8878a1275ee087003e61208fba3bfd59cbb73a85b2159abf742ae95e23db04964813fdc33ae18b074208428b2528205222
+  languageName: node
+  linkType: hard
+
+"gsap@npm:^3.11.5":
+  version: 3.11.5
+  resolution: "gsap@npm:3.11.5"
+  checksum: 0d62c9405ed9703f8c65e6190b648d9691fa84bd03bcde0d286cd29d80c5865c22aa57a128b33299c0c15d41473e83f13be1645700325f3821dd912a3022350d
   languageName: node
   linkType: hard
 
@@ -6218,6 +6232,7 @@ __metadata:
     "@astrojs/solid-js": ^2.1.0
     "@astrojs/vercel": ^3.2.1
     "@fontsource/inter": ^4.5.15
+    "@hotwired/turbo": ^7.3.0
     "@types/isotope-layout": ^3.0.9
     "@typescript-eslint/parser": ^5.55.0
     astro: ^2.1.0
@@ -6226,6 +6241,7 @@ __metadata:
     eslint-plugin-astro: ^0.24.0
     eslint-plugin-jsx-a11y: ^6.7.1
     eslint-plugin-solid: ^0.11.0
+    gsap: ^3.11.5
     husky: ^8.0.0
     isotope-layout: ^3.0.6
     plaiceholder: ^2.5.0

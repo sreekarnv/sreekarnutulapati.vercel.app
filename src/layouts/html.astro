@@ -60,5 +60,9 @@ const pathname = Astro.url.pathname;
   </head>
   <body>
     <slot />
+
+    <div data-turbo-permanent>
+      <script src="/src/app/app.ts"></script>
+    </div>
   </body>
 </html>

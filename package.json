@@ -16,8 +16,10 @@
   "dependencies": {
     "@astrojs/image": "^0.16.1",
     "@fontsource/inter": "^4.5.15",
+    "@hotwired/turbo": "^7.3.0",
     "astro": "^2.1.0",
     "clsx": "^1.2.1",
+    "gsap": "^3.11.5",
     "isotope-layout": "^3.0.6",
     "plaiceholder": "^2.5.0",
     "solid-js": "^1.4.3",
