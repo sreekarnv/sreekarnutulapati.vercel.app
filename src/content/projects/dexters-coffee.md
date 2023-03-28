@@ -10,5 +10,6 @@ techStack:
     { link: '/logos/svelte.webp', alt: 'Svelte' },
     { link: '/logos/typescript.png', alt: 'Typescript' },
     { link: '/logos/python.jpg', alt: 'Python' },
+    { link: '/logos/bootstrap.png', alt: 'Bootstrap' },
   ]
 ---

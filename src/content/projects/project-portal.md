@@ -9,5 +9,6 @@ techStack:
   [
     { link: '/logos/react.png', alt: 'ReactJS' },
     { link: '/logos/bootstrap.png', alt: 'Bootstrap' },
+    { link: '/logos/sass.png', alt: 'SASS' },
   ]
 ---

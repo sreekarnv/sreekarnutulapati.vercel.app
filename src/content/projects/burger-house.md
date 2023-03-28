@@ -13,7 +13,9 @@ techStack:
   [
     { link: '/logos/nextjs.png', alt: 'NextJS' },
     { link: '/logos/mongodb.png', alt: 'MongoDB' },
+    { link: '/logos/redux.png', alt: 'Redux' },
     { link: '/logos/trpc.svg', alt: 'tRPC' },
     { link: '/logos/typescript.png', alt: 'Typescript' },
+    { link: '/logos/sass.png', alt: 'SASS' },
   ]
 ---
